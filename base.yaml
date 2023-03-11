@@ -1,0 +1,41 @@
+steps:
+  - brew:
+      tap:
+        - miguelandres/homebrew-tap
+        - spotify/public
+      formula:
+        # Programming languages & Tools
+        # - bazel has been moved to bazelisk on mac and bazel on linux
+        - coursier
+        - kotlin
+        - ktlint
+        - nodejs
+        - python3
+        - ruby
+        - rustup
+        - sbt
+        - scala
+        # Data processing
+        - jupyterlab
+        - scio
+        # Version control
+        - git
+        - gh
+        - hub
+        - pre-commit
+        # Linters
+        - markdownlint-cli
+        - pylint
+        - yapf
+        # Other stuff
+        - openssl
+        - vim
+  - brew:
+      # This is a separate brew directive so it can be skipped in CI.
+      # Some of these formulae either take too long to install or just
+      # don't install in CI.
+      skip_in_ci: true
+      formula:
+        - buildifier
+        - go
+        - gopls

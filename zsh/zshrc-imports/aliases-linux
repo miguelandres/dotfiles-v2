@@ -1,0 +1,4 @@
+# shellcheck shell=bash
+
+alias python='/usr/bin/python3'
+alias pip=pip3

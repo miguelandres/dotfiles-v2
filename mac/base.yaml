@@ -1,0 +1,110 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  brew:
+    force_casks: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - link:
+      - ~/Library/LaunchAgents/sh.brew.update.plist: sh.brew.update.plist
+      - ~/Library/LaunchAgents/sh.brew.upgrade.plist: sh.brew.upgrade.plist
+  - create:
+      - ~/Library/Workflows/Services
+  - exec:
+      - ./defaults/base.sh
+      - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.update.plist
+      - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.upgrade.plist
+      - cmd: ./install_workflows.sh
+        skip_in_ci: true
+  - brew:
+      tap:
+        - homebrew/cask
+        - homebrew/cask-drivers
+        - homebrew/cask-fonts
+        # for different versions of temurin
+        - homebrew/cask-versions
+        - miguelandres/homebrew-tap
+        - spotify/public
+      formula:
+        # This is bazelisk on mac, bazel on linux
+        - bazelisk
+        # Uncomment when https://github.com/kcrawford/dockutil/issues/146
+        # is fixed
+        # - dockutil
+        # Eww, this is because of php in alfred workflows
+        - php
+        # Dependency management
+        - mas
+        # macOS gui helpers
+        - dockutil
+        # Other stuff
+        - alda
+        - dezoomify-rs
+        - exiftool
+        - graphviz
+        - openssl
+        - vim
+      cask:
+        # Programming stuff
+        - android-commandlinetools
+        - android-studio
+        - jupyter-notebook-ql
+        - jupyter-notebook-viewer
+        - github
+        - visual-studio-code
+        # Basics
+        - alfred
+        - google-chrome
+        - font-meslo-lg-nerd-font
+        - iterm2
+        # Communication
+        - discord
+        - signal
+        # Media
+        - netnewswire
+        - spotify
+        - steam
+        - vlc
+        # Helpful tools
+        - disk-inventory-x
+        - logitech-options
+        - mysides
+  - brew:
+      # This is a separate brew directive so it can be skipped in CI.
+      # Some of these formulae and casks either take too long to install or just
+      # don't install in CI.
+      # `mas` actions should never be run in CI since they depend on a
+      # Mac App Store login.
+      skip_in_ci: true
+      cask:
+        - basictex
+      mas:
+        # Chat & Communication
+        KakaoTalk: 869223134
+        LINE: 539883307
+        Messenger: 1480068668
+        Telegram: 747648890
+        WhatsApp: 1147396723
+        Wechat: 836500024
+        # Notetaking & Organization
+        GoodNotes: 1444383602
+        OneNote: 784801555
+        Things: 904280696
+        # Utilities
+        Dashlane: 517914548
+        Magnet: 441258766
+        Theine: 955848755
+        Tooth Fairy: 1191449274
+        BetterSnapTool: 417375580
+        # Safari Extensions
+        Hush: 1544743900
+        # Creative
+        Darkroom: 953286746
+        Kindle: 405399194
+        # Office
+        OneDrive: 823766827

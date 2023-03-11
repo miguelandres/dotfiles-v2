@@ -1,0 +1,12 @@
+# shellcheck shell=bash
+
+# shellcheck disable=SC1091
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Enables fzf
+# shellcheck disable=SC1091
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+# This file is not present in apt-get in raspbian, but it still works
+# shellcheck disable=SC1091
+source /usr/share/doc/fzf/examples/completion.zsh 2>/dev/null
+export PATH=$PATH:/snap/bin

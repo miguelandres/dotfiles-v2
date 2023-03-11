@@ -1,0 +1,54 @@
+name: Apply personal configuration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  apply-configs:
+    name: ${{ matrix.make.name }} (${{ matrix.target.name }})
+    runs-on: ${{ matrix.target.gh_env }}
+    strategy:
+      fail-fast: false
+      matrix:
+        rust: [nightly]
+        target:
+          - name: linux
+            gh_env: ubuntu-latest
+          - name: mac-personal-migue
+            gh_env: macos-12
+          - name: mac-personal-mati
+            gh_env: macos-12
+        include:
+          - target:
+              gh_env: ubuntu-latest
+            binary_version: x86_64-unknown-linux-gnu
+          - target:
+              gh_env: macos-12
+            binary_version: macos-universal
+
+    env:
+      RUST_BACKTRACE: full
+      RUSTV: ${{ matrix.rust }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Install dotfiles
+        run: |
+          brew tap miguelandres/homebrew-tap
+          brew install dotfiles-rs
+      - name: Apply config ${{ matrix.target.name }}
+        run: |
+          dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
+          echo "=========================================="
+          echo "Running dotfiles again to test idempotence"
+          echo "=========================================="
+          dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml

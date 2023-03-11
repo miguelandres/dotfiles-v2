@@ -1,0 +1,25 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  brew:
+    force_casks: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - subconfig:
+      - base.yaml
+      - zsh/base.yaml
+      - zsh/mac.yaml
+      - zsh/docker.yaml
+      - git/personal.yaml
+      - tmux/tmux.yaml
+      - vim/vim.yaml
+      - mac/base.yaml
+      - mac/personal.yaml
+      - mac/docker.yaml
+  - exec:
+      - ./mac/defaults/migue.sh

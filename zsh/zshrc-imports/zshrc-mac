@@ -1,0 +1,40 @@
+# shellcheck shell=bash
+# This is used to fix iTerm keyboard movement, see
+# https://coderwall.com/p/a8uxma/zsh-iterm2-osx-shortcuts
+
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
+
+HOMEBREW_FORCE_VENDOR_RUBY=1
+export HOMEBREW_FORCE_VENDOR_RUBY
+
+if [ -d "/opt/homebrew/opt" ]
+then
+  # shellcheck disable=SC2046
+  eval $(/opt/homebrew/bin/brew shellenv)
+else
+  # shellcheck disable=SC2046
+  eval $(/usr/local/bin/brew shellenv)
+fi
+
+
+BREW_PREFIX=$(brew --prefix)
+PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$PATH
+PATH=$(gem environment gemdir)/bin:$PATH
+ANDROID_SDK_ROOT=$BREW_PREFIX/share/android-commandlinetools
+LDFLAGS="-L$BREW_PREFIX/opt/openssl@3/lib -L$BREW_PREFIX/opt/ruby/lib"
+CPPFLAGS="-I$BREW_PREFIX/opt/openssl@3/include I$BREW_PREFIX/opt/ruby/include"
+PKG_CONFIG_PATH="$BREW_PREFIX/opt/openssl@3/lib/pkgconfig:$BREW_PREFIX/opt/ruby/lib/pkgconfig"
+SCALA_HOME=$BREW_PREFIX/opt/scala/idea
+export PKG_CONFIG_PATH
+export LDFLAGS
+export CPPFLAGS
+export PATH
+export ANDROID_SDK_ROOT
+export SCALA_HOME
+
+
+# shellcheck disable=SC1091
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"

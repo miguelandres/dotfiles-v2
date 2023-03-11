@@ -1,0 +1,9 @@
+defaults:
+  link:
+    force: true
+    relink: true
+
+steps:
+  - link:
+      - ~/.gitconfig: gitconfig-mati
+      - ~/.gitignore_global: gitignore_global

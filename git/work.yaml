@@ -1,0 +1,10 @@
+defaults:
+  link:
+    force: true
+    relink: true
+
+steps:
+  - link:
+      - ~/.gitconfig: gitconfig-work
+      - ~/.gitignore_global: gitignore_global
+      - ~/.work-commit-template.txt: work-commit-template.txt

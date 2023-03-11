@@ -1,0 +1,16 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  brew:
+    force_casks: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - brew:
+      formula:
+        # This is bazelisk on mac, bazel on linux
+        - bazel

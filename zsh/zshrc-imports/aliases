@@ -1,0 +1,24 @@
+# shellcheck shell=bash
+
+alias cdsrc="cd ~/src"
+
+alias ytdl="youtube-dl --external-downloader aria2c --external-downloader-args '-j 16 -x 16 -s 16 -k 1M'"
+
+# Get week number
+alias week='date +%V'
+
+alias fix_submodules='git submodule update --recursive --init'
+
+# better zz from fasd
+function zz() {
+  local dir
+  dir="$(fasd -Rdl "$*" | fzf --query="$*" -1 -0 --no-sort +m)" && cd "${dir}" || return 1
+}
+
+
+# Usage: fv file pattern
+function fv() {
+  local file
+  file="$(fzf --exact --height 40% --reverse --query="$1"  --select-1 --exit-0)"
+  [[ -n "$file" ]] && vim "$file"
+}

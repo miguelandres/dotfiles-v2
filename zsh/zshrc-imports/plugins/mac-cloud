@@ -1,0 +1,15 @@
+# shellcheck shell=bash
+
+case $(uname) in
+  Darwin)
+    # shellcheck disable=SC1091
+    source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+    # shellcheck disable=SC1091
+    source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+  ;;
+  Linux)
+  ;;
+esac
+
+plugins+=(gcloud kubectl terraform)

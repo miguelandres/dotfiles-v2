@@ -1,0 +1,33 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+        exclude: "^mac/Workflows/"
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-vcs-permalinks
+      - id: check-yaml
+      - id: destroyed-symlinks
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: sort-simple-yaml
+      - id: trailing-whitespace
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: forbid-binary
+        exclude: "^mac/Workflows/"
+      - id: git-dirty
+      - id: markdownlint
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.4.2
+    hooks:
+      - id: forbid-tabs
+        exclude: "^mac/Workflows/"
+      - id: remove-tabs
+        exclude: "^mac/Workflows/"
+        args: ["--whitespaces-count", "2"]

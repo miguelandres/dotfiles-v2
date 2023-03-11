@@ -1,0 +1,16 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  link:
+    create_parent_dirs: true
+    relink: true
+
+steps:
+  - brew:
+      formula:
+        - docker
+        - docker-compose
+  - create:
+      - ~/.docker/cli-plugins
+  - exec:
+      - ln -sfn $(brew --prefix docker-compose)/bin/docker-compose ~/.docker/cli-plugins/docker-compose

@@ -1,0 +1,7 @@
+steps:
+  - brew:
+      formula:
+        - kubernetes-cli
+        - terraform
+      cask:
+        - google-cloud-sdk

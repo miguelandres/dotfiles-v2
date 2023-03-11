@@ -1,0 +1,12 @@
+defaults:
+  link:
+    create_parent_dirs: true
+    force: true
+
+steps:
+  - brew:
+      formula:
+        - bazel
+  - link:
+      - ~/.zshrc-imports/.zshrc-linux: zshrc-imports/zshrc-linux
+      - ~/.zshrc-imports/.aliases-linux: zshrc-imports/aliases-linux

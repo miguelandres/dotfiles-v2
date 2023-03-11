@@ -1,0 +1,10 @@
+defaults:
+  link:
+    force: true
+    relink: true
+
+steps:
+  - link:
+      - ~/.gitconfig: gitconfig-personal
+      - ~/.gitignore_global: gitignore_global
+      - ~/.commit-template.txt: commit-template.txt
