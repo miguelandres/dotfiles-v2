@@ -57,6 +57,7 @@ steps:
         - jupyter-notebook-viewer
         - github
         - visual-studio-code
+        - textmate
         # Basics
         - alfred
         - google-chrome

@@ -1,4 +1,11 @@
+defaults:
+  link:
+    force: true
+    relink: true
+
 steps:
+  - link:
+      - ~/.shellcheckrc: shellcheckrc
   - brew:
       tap:
         - miguelandres/homebrew-tap
