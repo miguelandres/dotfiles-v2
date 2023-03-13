@@ -22,10 +22,9 @@ steps:
       - ~/.oh-my-zsh/custom/plugins
       - ~/.oh-my-zsh/custom/themes
   - exec:
-      - '[ ! -d "~/.oh-my-zsh/custom/plugins/alias-tips" ] || git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips'
+      - "[ -d ~/.oh-my-zsh/custom/plugins/alias-tips ] || git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips"
   - link:
       - ~/.oh-my-zsh/custom/plugins/_bazel: custom/plugins/_bazel
-      - ~/.oh-my-zsh/custom/plugins/arcanist-tw: custom/plugins/arcanist-tw
       - ~/.zshrc: zshrc
       - ~/.zshenv: zshenv
       - ~/.zshrc-imports/.aliases: zshrc-imports/aliases
