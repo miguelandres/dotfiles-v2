@@ -21,3 +21,6 @@ steps:
       - vim/vim.yaml
       - mac/base.yaml
       - mac/cloud.yaml
+  - brew:
+      formula:
+        - maven
