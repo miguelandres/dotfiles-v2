@@ -41,7 +41,9 @@ steps:
         # Dependency management
         - mas
         # macOS gui helpers
-        - dockutil
+        # dockutil is not working currently on brew
+        # - dockutil
+        - switchaudio-osx
         # Other stuff
         - alda
         - dezoomify-rs
