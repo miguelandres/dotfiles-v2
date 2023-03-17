@@ -1,8 +1,6 @@
 [user]
-        name = Miguel Yáñez-Barreto
-        email = myanezbarreto@twitter.com
-  name = Miguel Andrés Yáñez-Barreto
-  email = myanezbarreto@twitter.com
+  name = Miguel (Yáñez-)Barreto
+  email = ma_barreto@apple.com
 [diff]
   renames = true
 [http]
@@ -22,6 +20,6 @@ pushInsteadOf = https://github.com/
   process = git-lfs filter-process
   required = true
 [commit]
-  template = /Users/myanezbarreto/.work-commit-template.txt
+  template = /Users/miguely/.work-commit-template.txt
 [core]
-  excludesfile = /Users/myanezbarreto/.gitignore_global
+  excludesfile = /Users/miguely/.gitignore_global
