@@ -52,6 +52,16 @@ steps:
         # Other stuff
         - openssl
         - vim
+        # Shell stuff
+        - fzf
+        - rbenv
+        - shellcheck
+        - shfmt
+        - tmux
+        - zsh
+        - zsh-autosuggestions
+        - zsh-completions
+        - zsh-syntax-highlighting
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # Some of these formulae either take too long to install or just
