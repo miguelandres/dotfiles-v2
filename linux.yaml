@@ -15,6 +15,7 @@ steps:
       - linux/base.yaml
       - zsh/base.yaml
       - zsh/linux.yaml
+      - zsh/docker.yaml
       - git/personal.yaml
       - tmux/tmux.yaml
       - vim/vim.yaml
