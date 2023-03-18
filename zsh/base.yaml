@@ -11,6 +11,7 @@ steps:
       - ~/.oh-my-zsh/custom/themes
   - exec:
       - "[ -d ~/.oh-my-zsh/custom/plugins/alias-tips ] || git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips"
+      - "[ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] ||git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k"
   - link:
       - ~/.oh-my-zsh/custom/plugins/_bazel: custom/plugins/_bazel
       - ~/.zshrc: zshrc
