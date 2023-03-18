@@ -12,14 +12,22 @@ backing for maintainability and testability.
 ```sh
 [ -f ~/.ssh/id_rsa ] || ssh-keygen -t rsa -b 4096 -C "miguelandres@users.noreply.github.com"
 eval "$(ssh-agent -s)"
-if [ `uname` = "Darwin" ]; then;
+
+if [[ `uname` = "Darwin" ]]; then;
   tee ~/.ssh/config << EOF
 Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
 EOF
+else
+tee ~/.ssh/config << EOF
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa
+EOF
 fi
+
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null || ssh-add ~/.ssh/id_rsa
 
 echo "Put the following key in your github account."
