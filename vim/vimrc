@@ -71,7 +71,7 @@ set smartindent
 set t_Co=256
 
 " turn line numbers on
-set number
+" set number
 
 " highlight matching braces
 set showmatch
