@@ -7,6 +7,10 @@ bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
+source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 HOMEBREW_FORCE_VENDOR_RUBY=1
 export HOMEBREW_FORCE_VENDOR_RUBY
 
@@ -19,6 +23,16 @@ else
   eval $(/usr/local/bin/brew shellenv)
 fi
 
+export JAVA_19_HOME=$(/usr/libexec/java_home -v 19)
+export JAVA_17_HOME=$(/usr/libexec/java_home -v 17)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_8_HOME=$(/usr/libexec/java_home -v 8)
+alias java19="export JAVA_HOME=$JAVA_19_HOME"
+alias java17="export JAVA_HOME=$JAVA_17_HOME"
+alias java11="export JAVA_HOME=$JAVA_11_HOME"
+alias java8="export JAVA_HOME=$JAVA_8_HOME"
+
+java11
 
 BREW_PREFIX=$(brew --prefix)
 PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$PATH
