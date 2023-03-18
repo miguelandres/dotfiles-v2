@@ -4,9 +4,7 @@ defaults:
     force: true
 
 steps:
-  - brew:
-      formula:
-        - bazel
   - link:
       - ~/.zshrc-imports/.zshrc-linux: zshrc-imports/zshrc-linux
       - ~/.zshrc-imports/.aliases-linux: zshrc-imports/aliases-linux
+      - ~/.zshrc-imports/plugins/linux: zshrc-imports/plugins/linux
