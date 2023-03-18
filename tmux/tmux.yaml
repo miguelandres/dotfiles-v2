@@ -6,12 +6,9 @@ defaults:
     force: true
 
 steps:
-  - brew:
-      formula:
-        - tmux
   - create:
       - ~/.tmux/plugins/tpm
   - link:
       - ~/.tmux.conf: tmux.conf
   - exec:
-      - '[ ! -d "tpm" ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
+      - '[ ! -d "~/.tmux/plugins/tpm" ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
