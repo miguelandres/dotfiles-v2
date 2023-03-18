@@ -10,7 +10,18 @@ defaults:
     relink: true
 
 steps:
-  - brew:
-      formula:
-        # This is bazelisk on mac, bazel on linux
-        - bazel
+  - apt:
+      package:
+        # Command line basics
+        - docker
+        - fzf
+        - git
+        - tmux
+        - vim
+        - zsh
+        # Programming
+        - default-jdk
+        - python3
+        - scala
+  - exec:
+      - pip3 install pre-commit
