@@ -4,18 +4,6 @@ defaults:
     force: true
 
 steps:
-  - brew:
-      formula:
-        # Shell tools
-        - fzf
-        - rbenv
-        - romkatv/powerlevel10k/powerlevel10k
-        - shellcheck
-        - shfmt
-        - zsh
-        - zsh-autosuggestions
-        - zsh-completions
-        - zsh-syntax-highlighting
   - link:
       - ~/.zshrc-imports/.zshrc-mac: zshrc-imports/zshrc-mac
       - ~/.zshrc-imports/.aliases-mac: zshrc-imports/aliases-mac
