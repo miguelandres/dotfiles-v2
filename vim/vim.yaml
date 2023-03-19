@@ -13,6 +13,6 @@ steps:
       - ~/.vimrc: vimrc
       - ~/.vim/after/ftplugin: after/ftplugin
   - exec:
-      - '[ -d "~/.vim/bundle/Vundle.vim" ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
-      - '[ -d "~/.vim/bundle/bbye" ] || git clone https://github.com/moll/vim-bbye.git ~/.vim/bundle/bbye'
+      - '[ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+      - '[ -d ~/.vim/bundle/bbye ] || git clone https://github.com/moll/vim-bbye.git ~/.vim/bundle/bbye'
       - '(vim -s install.vimscript || vim -s install.vimscript || echo "I give up, scripting vim installs is a pain in the ass.")'
