@@ -1,0 +1,5 @@
+steps:
+  - apt:
+      package:
+        - docker
+        - docker-compose

@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: homepage
+    environment:
+      - PORT=80
+    ports:
+      - 80:80
+    volumes:
+      - /home/miguely/docker/homepage:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock

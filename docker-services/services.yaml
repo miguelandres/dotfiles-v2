@@ -1,0 +1,5 @@
+steps:
+  - exec:
+      - sudo docker-compose -f portainer/docker-compose.yml up -d
+      - sudo docker-compose -f homepage/docker-compose.yml up -d
+      - sudo docker-compose -f airconnect/docker-compose.yml up -d

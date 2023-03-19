@@ -1,0 +1,15 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  brew:
+    force_casks: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - subconfig:
+      - linux.yaml
+      - linux/standard.yaml
