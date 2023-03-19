@@ -3,6 +3,7 @@ services:
   homepage:
     image: ghcr.io/benphelps/homepage:latest
     container_name: homepage
+    restart: always
     environment:
       - PORT=80
     ports:
