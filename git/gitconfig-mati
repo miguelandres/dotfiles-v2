@@ -15,4 +15,4 @@ pushInsteadOf = https://github.com/
   process = git-lfs filter-process
   required = true
 [core]
-  excludesfile = /Users/myanezbarreto/.gitignore_global
+  excludesfile = $HOME/.gitignore_global

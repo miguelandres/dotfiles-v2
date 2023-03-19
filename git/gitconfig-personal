@@ -17,4 +17,4 @@ pushInsteadOf = https://github.com/
 [core]
   excludesfile = $HOME/.gitignore_global
 [commit]
-  template = /Users/miguely/.commit-template.txt
+  template = $HOME/.commit-template.txt
