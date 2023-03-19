@@ -24,6 +24,8 @@ jobs:
             gh_env: macos-12
           - name: mac-personal-mati
             gh_env: macos-12
+          - name: mac-work
+            gh_env: macos-12
         include:
           - target:
               gh_env: ubuntu-latest
