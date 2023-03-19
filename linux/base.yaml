@@ -13,7 +13,6 @@ steps:
   - apt:
       package:
         # Command line basics
-        - docker
         - fzf
         - git
         - tmux
@@ -21,7 +20,8 @@ steps:
         - zsh
         # Programming
         - default-jdk
+        - pre-commit
         - python3
+        - ruby
         - scala
-  - exec:
-      - pip3 install pre-commit
+        - uidmap
