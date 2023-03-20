@@ -7,4 +7,4 @@ steps:
   - link:
       - ~/.shellcheckrc: shellcheckrc
   - exec:
-      - curl https://github.com/miguelandres.keys | tee -a ~/.ssh/authorized_keys
+      - curl https://github.com/miguelandres.keys > ~/.ssh/authorized_keys
