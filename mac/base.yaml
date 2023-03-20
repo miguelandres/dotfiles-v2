@@ -15,6 +15,7 @@ steps:
       - ~/Library/Workflows/Services
   - exec:
       - cmd: ./defaults/base.sh
+        skip_in_ci: true
         description: Running the base macOS sensible defaults, shared across all configs
       - cmd: launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.update.plist
         description: Setting brew update to run on a regular basis.

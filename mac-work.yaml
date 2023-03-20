@@ -22,4 +22,5 @@ steps:
         - maven
   - exec:
       - cmd: ./mac/defaults/migue.sh
+        skip_in_ci: true
         description: Running Migue's specific default configs

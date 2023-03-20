@@ -19,4 +19,5 @@ steps:
       - mac/personal.yaml
   - exec:
       - cmd: ./mac/defaults/mati.sh
+        skip_in_ci: true
         description: Running Mati's specific default configs
