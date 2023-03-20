@@ -21,4 +21,5 @@ steps:
       formula:
         - maven
   - exec:
-      - ./mac/defaults/migue.sh
+      - cmd: ./mac/defaults/migue.sh
+        description: Running Migue's specific default configs

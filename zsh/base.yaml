@@ -10,8 +10,10 @@ steps:
       - ~/.oh-my-zsh/custom/plugins
       - ~/.oh-my-zsh/custom/themes
   - exec:
-      - "[ -d ~/.oh-my-zsh/custom/plugins/alias-tips ] || git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips"
-      - "[ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] ||git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k"
+      - cmd: "[ -d ~/.oh-my-zsh/custom/plugins/alias-tips ] || git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips"
+        description: Cloning alias-tips for oh-my-zsh
+      - cmd: "[ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] || git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k"
+        description: Cloning the powerlevel10k theme for oh-my-zsh
   - link:
       - ~/.oh-my-zsh/custom/plugins/_bazel: custom/plugins/_bazel
       - ~/.zshrc: zshrc

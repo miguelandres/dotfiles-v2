@@ -11,4 +11,5 @@ steps:
   - link:
       - ~/.tmux.conf: tmux.conf
   - exec:
-      - '[ ! -d "~/.tmux/plugins/tpm" ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
+      - cmd: '[ ! -d "~/.tmux/plugins/tpm" ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
+        description: Cloning tpm, tmux plugin manager

@@ -18,4 +18,5 @@ steps:
       - mac/base.yaml
       - mac/personal.yaml
   - exec:
-      - ./mac/defaults/mati.sh
+      - cmd: ./mac/defaults/mati.sh
+        description: Running Mati's specific default configs

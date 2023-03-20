@@ -20,4 +20,5 @@ steps:
       - mac/personal.yaml
       - mac/docker.yaml
   - exec:
-      - ./mac/defaults/migue.sh
+      - cmd: ./mac/defaults/migue.sh
+        description: Running Migue's specific default configs

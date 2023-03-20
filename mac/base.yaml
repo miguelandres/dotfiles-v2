@@ -14,11 +14,15 @@ steps:
   - create:
       - ~/Library/Workflows/Services
   - exec:
-      - ./defaults/base.sh
-      - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.update.plist
-      - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.upgrade.plist
+      - cmd: ./defaults/base.sh
+        description: Running the base macOS sensible defaults, shared across all configs
+      - cmd: launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.update.plist
+        description: Setting brew update to run on a regular basis.
+      - cmd: launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.upgrade.plist
+        description: Setting brew upgrade to run on a regular basis.
       - cmd: ./install_workflows.sh
         skip_in_ci: true
+        description: Installing useful Automator Workflows as Services.
   - brew:
       tap:
         - miguelandres/homebrew-tap
