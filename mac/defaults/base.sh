@@ -97,6 +97,9 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "America/New_York" 2>/dev/null
 
+# Disable bluetooth wake from sleep, no hot laptop in bag.
+defaults -currentHost write com.apple.Bluetooth RemoteWakeEnabled 0
+
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
