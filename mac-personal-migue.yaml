@@ -10,6 +10,7 @@ defaults:
 steps:
   - subconfig:
       - base.yaml
+      - github-keys.yaml
       - zsh/base.yaml
       - zsh/mac.yaml
       - zsh/docker.yaml
