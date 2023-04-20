@@ -2,6 +2,8 @@ defaults:
   link:
     create_parent_dirs: true
     force: true
+  brew:
+    force_casks: true
 
 steps:
   - link:
