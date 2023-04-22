@@ -106,8 +106,6 @@ steps:
         - vim
       cask:
         # Programming stuff
-        - android-commandlinetools
-        - android-studio
         - jupyter-notebook-ql
         - jupyter-notebook-viewer
         - github
