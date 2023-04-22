@@ -6,6 +6,8 @@ defaults:
   link:
     force: true
     relink: true
+  brew:
+    force_casks: true
 
 steps:
   - link:
@@ -111,6 +113,7 @@ steps:
         - github
         - visual-studio-code
         - textmate
+        - sourcetree
         # Basics
         - alfred
         - google-chrome

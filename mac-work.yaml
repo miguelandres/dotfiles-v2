@@ -20,6 +20,7 @@ steps:
   - brew:
       formula:
         - maven
+        - grpcurl
   - exec:
       - cmd: ./mac/defaults/migue.sh
         skip_in_ci: true

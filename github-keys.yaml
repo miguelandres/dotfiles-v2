@@ -1,0 +1,5 @@
+steps:
+  - exec:
+      - cmd: curl https://github.com/miguelandres.keys > ~/.ssh/authorized_keys
+        description: Getting SSH keys from Github
+        skip_in_ci: true

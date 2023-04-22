@@ -10,6 +10,7 @@ defaults:
 steps:
   - subconfig:
       - base.yaml
+      - github-keys.yaml
       - linux/base.yaml
       - zsh/base.yaml
       - zsh/linux.yaml

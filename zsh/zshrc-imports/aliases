@@ -1,6 +1,6 @@
 # shellcheck shell=bash
 
-alias cdsrc="cd ~/src"
+alias cds="cd ~/src"
 
 alias ytdl="youtube-dl --external-downloader aria2c --external-downloader-args '-j 16 -x 16 -s 16 -k 1M'"
 
@@ -22,3 +22,5 @@ function fv() {
   file="$(fzf --exact --height 40% --reverse --query="$1"  --select-1 --exit-0)"
   [[ -n "$file" ]] && vim "$file"
 }
+
+alias resource="source ~/.zshrc"

@@ -1,3 +1,7 @@
+defaults:
+  brew:
+    force_casks: true
+
 steps:
   - brew:
       tap:
