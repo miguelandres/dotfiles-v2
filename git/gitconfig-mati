@@ -16,3 +16,5 @@ pushInsteadOf = https://github.com/
   required = true
 [core]
   excludesfile = ~/.gitignore_global
+[commit]
+  cleanup = scissors

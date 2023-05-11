@@ -17,4 +17,5 @@ pushInsteadOf = https://github.com/
 [core]
   excludesfile = ~/.gitignore_global
 [commit]
+  cleanup = scissors
   template = ~/.commit-template.txt
