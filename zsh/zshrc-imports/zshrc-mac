@@ -19,15 +19,6 @@ else
   eval $(/usr/local/bin/brew shellenv)
 fi
 
-export JAVA_19_HOME=$(/usr/libexec/java_home -v 19)
-export JAVA_17_HOME=$(/usr/libexec/java_home -v 17)
-export JAVA_11_HOME=$(/usr/libexec/java_home -v 11)
-export JAVA_8_HOME=$(/usr/libexec/java_home -v 8)
-alias java19="export JAVA_HOME=$JAVA_19_HOME"
-alias java17="export JAVA_HOME=$JAVA_17_HOME"
-alias java11="export JAVA_HOME=$JAVA_11_HOME"
-alias java8="export JAVA_HOME=$JAVA_8_HOME"
-
 java11
 
 BREW_PREFIX=$(brew --prefix)
