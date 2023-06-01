@@ -34,6 +34,7 @@ steps:
         # Programming languages & Tools
         # - bazel has been moved to bazelisk on mac and bazel on linux
         - coursier
+        - jenv
         - kotlin
         - ktlint
         - nodejs
