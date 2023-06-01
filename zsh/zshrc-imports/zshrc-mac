@@ -36,7 +36,6 @@ export PATH
 export ANDROID_SDK_ROOT
 export SCALA_HOME
 
-
 # shellcheck disable=SC1091
 source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
