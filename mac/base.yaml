@@ -55,6 +55,7 @@ steps:
         - pylint
         - yapf
         # Other stuff
+        - comby
         - openssl
         - vim
         # Shell stuff
