@@ -80,7 +80,6 @@ steps:
   - brew:
       tap:
         - homebrew/cask
-        - homebrew/cask-drivers
         - homebrew/cask-fonts
         - miguelandres/homebrew-tap
         - spotify/public
