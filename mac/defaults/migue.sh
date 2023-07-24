@@ -2,9 +2,20 @@
 
 # ~/.macos — https://mths.be/macos
 
+SCRIPT=$(readlink -f $0)
+while true; do
+    read -p "Run ${SCRIPT} ? This may take a while and screw up your System Settings app until restart. [Y/N]" yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) echo "Not running the script"; exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+echo "Running ${SCRIPT}"
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit'
 
 # Ask for the administrator password upfront
 sudo -v
