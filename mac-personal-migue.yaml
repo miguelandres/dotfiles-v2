@@ -17,6 +17,7 @@ steps:
       - git/personal.yaml
       - tmux/tmux.yaml
       - vim/vim.yaml
+      - mac/java.yaml
       - mac/base.yaml
       - mac/personal.yaml
       - mac/docker.yaml

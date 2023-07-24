@@ -12,8 +12,6 @@ steps:
         - aria2
         - ffmpeg
       cask:
-        - temurin11
-        - temurin17
         - adobe-creative-cloud
         # streaming and screen recording
         - obs
