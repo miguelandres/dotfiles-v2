@@ -3,14 +3,17 @@
 # ~/.macos — https://mths.be/macos
 
 SCRIPT=$(readlink -f $0)
-while true; do
-    read -p "Run ${SCRIPT} ? This may take a while and screw up your System Settings app until restart. [Y/N]" yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) echo "Not running the script"; exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
+if [[ $? -gt 128 ]] ; then
+  echo "Timed out. Skipping this script."
+  exit
+else
+  case $yn in
+      [Yy]* ) break;;
+      [Nn]* ) echo "Not running the script"; exit;;
+      * ) echo "Not running the script"; exit;;
+  esac
+fi
 echo "Running ${SCRIPT}"
 
 
