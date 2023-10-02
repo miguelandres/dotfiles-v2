@@ -21,17 +21,17 @@ jobs:
           - name: linux
             gh_env: ubuntu-latest
           - name: mac-personal-migue
-            gh_env: macos-13-xlarge
+            gh_env: macos-latest-xlarge
           - name: mac-personal-mati
-            gh_env: macos-13-xlarge
+            gh_env: macos-latest-xlarge
           - name: mac-work
-            gh_env: macos-13-xlarge
+            gh_env: macos-latest-xlarge
         include:
           - target:
               gh_env: ubuntu-latest
             binary_version: x86_64-unknown-linux-gnu
           - target:
-              gh_env: macos-13-xlarge
+              gh_env: macos-latest-xlarge
             binary_version: macos-universal
 
     env:
