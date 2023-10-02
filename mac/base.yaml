@@ -79,7 +79,6 @@ steps:
   - brew:
       tap:
         - homebrew/cask
-        - homebrew/cask-drivers
         - homebrew/cask-fonts
         # for different versions of temurin
         - homebrew/cask-versions
