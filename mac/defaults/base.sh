@@ -2,9 +2,24 @@
 
 # ~/.macos — https://mths.be/macos
 
+SCRIPT=$(readlink -f $0)
+
+read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
+if [[ $? -gt 128 ]] ; then
+  echo "Timed out. Skipping this script."
+  exit
+else
+  case $yn in
+      [Yy]* ) break;;
+      [Nn]* ) echo "Not running the script"; exit;;
+      * ) echo "Not running the script"; exit;;
+  esac
+fi
+echo "Running ${SCRIPT}"
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit'
 
 # Ask for the administrator password upfront
 sudo -v

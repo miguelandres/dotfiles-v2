@@ -55,6 +55,7 @@ steps:
         - pylint
         - yapf
         # Other stuff
+        - comby
         - openssl
         - vim
         # Shell stuff
@@ -80,8 +81,6 @@ steps:
       tap:
         - homebrew/cask
         - homebrew/cask-fonts
-        # for different versions of temurin
-        - homebrew/cask-versions
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
