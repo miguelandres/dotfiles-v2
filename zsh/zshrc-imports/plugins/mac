@@ -1,1 +1,1 @@
-plugins+=(brew macos)
+plugins+=(brew macos gradle)
