@@ -18,3 +18,5 @@ pushInsteadOf = https://github.com/
   excludesfile = ~/.gitignore_global
 [commit]
   cleanup = scissors
+[init]
+	defaultBranch = main

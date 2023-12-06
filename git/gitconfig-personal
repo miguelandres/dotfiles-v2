@@ -19,3 +19,5 @@ pushInsteadOf = https://github.com/
 [commit]
   cleanup = scissors
   template = ~/.commit-template.txt
+[init]
+	defaultBranch = main

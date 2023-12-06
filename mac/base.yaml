@@ -102,7 +102,9 @@ steps:
         - dezoomify-rs
         - exiftool
         - graphviz
+        - hugo
         - openssl
+        - sass/sass/sass
         - vim
       cask:
         # Programming stuff
