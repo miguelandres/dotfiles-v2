@@ -129,7 +129,7 @@ steps:
         - vlc
         # Helpful tools
         - disk-inventory-x
-        - logitech-options
+        - logi-options-plus
         - mysides
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
