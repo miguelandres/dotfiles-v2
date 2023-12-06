@@ -19,7 +19,7 @@ else
   eval $(/usr/local/bin/brew shellenv)
 fi
 
-java11
+java17
 
 BREW_PREFIX=$(brew --prefix)
 PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$PATH
