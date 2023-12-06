@@ -3,6 +3,7 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 
 # Open IntelliJ
 alias idea="open -na \"IntelliJ IDEA.app\" --args"
+alias ideace="open -na \"IntelliJ IDEA CE.app\" --args"
 
 alias dr="cd ~/Google\ Drive"
 alias dl="cd ~/Downloads"
