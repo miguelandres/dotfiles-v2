@@ -7,7 +7,7 @@ fi
 
 ZSH_DISABLE_COMPFIX="true"
 
-ZSH_THEME="powerlevel10k/powerlevel10k" 
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -75,6 +75,7 @@ plugins=(
   extract
   fancy-ctrl-z
   fasd
+  gh
   git
   gitignore
   history
