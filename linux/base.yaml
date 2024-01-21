@@ -13,6 +13,8 @@ steps:
         # Command line basics
         - fzf
         - git
+        - gh
+        - hub
         - tmux
         - vim
         - zsh
