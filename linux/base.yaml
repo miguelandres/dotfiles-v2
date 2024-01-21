@@ -18,6 +18,7 @@ steps:
         - zsh
         # Programming
         - default-jdk
+        - kotlin
         - pre-commit
         - python3
         - ruby
