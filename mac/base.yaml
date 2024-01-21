@@ -34,18 +34,11 @@ steps:
         # Programming languages & Tools
         # - bazel has been moved to bazelisk on mac and bazel on linux
         - act
-        - coursier
-        - kotlin
-        - ktlint
-        - nodejs
         - python3
         - ruby
         - rustup
-        - sbt
-        - scala
         # Data processing
         - jupyterlab
-        - scio
         # Version control
         - git
         - gh
