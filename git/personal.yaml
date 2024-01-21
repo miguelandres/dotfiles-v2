@@ -4,9 +4,6 @@ defaults:
     relink: true
 
 steps:
-  - brew:
-      cask:
-        - intellij-idea-ce
   - link:
       - ~/.gitconfig: gitconfig-personal
       - ~/.gitignore_global: gitignore_global

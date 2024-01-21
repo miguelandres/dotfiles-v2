@@ -13,6 +13,7 @@ steps:
         - ffmpeg
       cask:
         - adobe-creative-cloud
+        - intellij-idea-ce
         # streaming and screen recording
         - obs
         - blackhole-2ch
