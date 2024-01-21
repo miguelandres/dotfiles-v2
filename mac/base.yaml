@@ -34,7 +34,6 @@ steps:
         # Programming languages & Tools
         # - bazel has been moved to bazelisk on mac and bazel on linux
         - act
-        - python3
         - ruby
         - rustup
         # Version control
@@ -42,10 +41,6 @@ steps:
         - gh
         - hub
         - pre-commit
-        # Linters
-        - markdownlint-cli
-        - pylint
-        - yapf
         # Other stuff
         - comby
         - openssl
@@ -69,6 +64,11 @@ steps:
         - buildifier
         - go
         - gopls
+        - python3
+        # Linters
+        - markdownlint-cli
+        - pylint
+        - yapf
   - brew:
       tap:
         - homebrew/cask
