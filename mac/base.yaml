@@ -33,6 +33,7 @@ steps:
       formula:
         # Programming languages & Tools
         # - bazel has been moved to bazelisk on mac and bazel on linux
+        - act
         - coursier
         - kotlin
         - ktlint
@@ -86,9 +87,7 @@ steps:
       formula:
         # This is bazelisk on mac, bazel on linux
         - bazelisk
-        # Uncomment when https://github.com/kcrawford/dockutil/issues/146
-        # is fixed
-        # - dockutil
+        - dockutil
         # Eww, this is because of php in alfred workflows
         - php
         # Dependency management
