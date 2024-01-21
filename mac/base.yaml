@@ -37,8 +37,6 @@ steps:
         - python3
         - ruby
         - rustup
-        # Data processing
-        - jupyterlab
         # Version control
         - git
         - gh
@@ -100,8 +98,6 @@ steps:
         - vim
       cask:
         # Programming stuff
-        - jupyter-notebook-ql
-        - jupyter-notebook-viewer
         - github
         - visual-studio-code
         - textmate
