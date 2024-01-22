@@ -71,6 +71,8 @@ steps:
         - markdownlint-cli
         - pylint
         - yapf
+        # Other
+        - hugo
   - brew:
       tap:
         - homebrew/cask
@@ -91,7 +93,6 @@ steps:
         - dezoomify-rs
         - exiftool
         - graphviz
-        - hugo
         - sass/sass/sass
         - vim
       cask:
