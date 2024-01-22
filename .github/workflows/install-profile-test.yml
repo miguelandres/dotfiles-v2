@@ -41,6 +41,8 @@ jobs:
           brew tap miguelandres/homebrew-tap
           brew install dotfiles-rs
       - name: Apply config ${{ matrix.target.name }}
+        env:
+          HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
           dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
           echo "=========================================="
