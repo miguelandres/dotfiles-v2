@@ -31,11 +31,6 @@ steps:
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
-        # Programming languages & Tools
-        # - bazel has been moved to bazelisk on mac and bazel on linux
-        - act
-        - ruby
-        - rustup
         # Version control
         - git
         - gh
@@ -47,7 +42,6 @@ steps:
         - vim
         # Shell stuff
         - fzf
-        - rbenv
         - shellcheck
         - shfmt
         - tmux
@@ -61,10 +55,16 @@ steps:
       # don't install in CI.
       skip_in_ci: true
       formula:
+        # Programming languages & Tools
+        # - bazel has been moved to bazelisk on mac and bazel on linux
+        - act
         - buildifier
         - go
         - gopls
         - python3
+        - rbenv
+        - ruby
+        - rustup
         # Linters
         - markdownlint-cli
         - pylint
