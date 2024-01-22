@@ -61,6 +61,8 @@ steps:
         - buildifier
         - go
         - gopls
+        - openssl
+        - php # only here because of fucking php alfred workflows
         - python3
         - rbenv
         - ruby
@@ -78,14 +80,11 @@ steps:
       formula:
         # This is bazelisk on mac, bazel on linux
         - bazelisk
-        - dockutil
-        # Eww, this is because of php in alfred workflows
-        - php
         # Dependency management
         - mas
         # macOS gui helpers
         # dockutil is not working currently on brew
-        # - dockutil
+        - dockutil
         - switchaudio-osx
         # Other stuff
         - alda
@@ -93,7 +92,6 @@ steps:
         - exiftool
         - graphviz
         - hugo
-        - openssl
         - sass/sass/sass
         - vim
       cask:
