@@ -95,7 +95,6 @@ steps:
         - dezoomify-rs
         - exiftool
         - graphviz
-        - vim
       cask:
         # Programming stuff
         - github
