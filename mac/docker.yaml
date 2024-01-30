@@ -11,6 +11,7 @@ steps:
         - docker
         - docker-buildx
         - docker-compose
+        - colima
   - create:
       - ~/.docker/cli-plugins
   - exec:
