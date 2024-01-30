@@ -73,6 +73,8 @@ steps:
         - yapf
         # Other
         - hugo
+        # Necessary for Hugo stuff
+        - sass/sass/sass
   - brew:
       tap:
         - homebrew/cask
@@ -93,7 +95,6 @@ steps:
         - dezoomify-rs
         - exiftool
         - graphviz
-        - sass/sass/sass
         - vim
       cask:
         # Programming stuff
