@@ -39,7 +39,6 @@ steps:
         # Other stuff
         - comby
         - openssl
-        - vim
         # Shell stuff
         - fzf
         - shellcheck
@@ -67,6 +66,7 @@ steps:
         - rbenv
         - ruby
         - rustup
+        - vim
         # Linters
         - markdownlint-cli
         - pylint
