@@ -19,10 +19,12 @@ else
   eval $(/usr/local/bin/brew shellenv)
 fi
 
-java17
-
 BREW_PREFIX=$(brew --prefix)
 PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$PATH
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 PATH=$(gem environment gemdir)/bin:$PATH
 ANDROID_SDK_ROOT=$BREW_PREFIX/share/android-commandlinetools
 LDFLAGS="-L$BREW_PREFIX/opt/openssl@3/lib -L$BREW_PREFIX/opt/ruby/lib"
