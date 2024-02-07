@@ -17,6 +17,7 @@ steps:
       cask:
         - temurin11
         - temurin17
+        - temurin21
   - brew:
       tap:
         - miguelandres/homebrew-tap
