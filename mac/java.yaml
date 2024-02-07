@@ -36,7 +36,15 @@ steps:
     - cmd: jenv enable-plugin gradle
       description: Enable gradle plugin for `jenv`
       skip_in_ci: true
-    - jenv add /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
-    - jenv add /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
-    - jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
-    - jenv global 21.0
+    - cmd: jenv add /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+      description: Add temurin21 to jenv
+      skip_in_ci: true
+    - cmd: jenv add /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+      description: Add temurin17 to jenv
+      skip_in_ci: true
+    - cmd: jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
+      description: Add temurin11 to jenv
+      skip_in_ci: true
+    - cmd: jenv global 21.0
+      description: set jenv to 21
+      skip_in_ci: true
