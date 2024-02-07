@@ -20,6 +20,7 @@ steps:
       # so we don't call into mac/java.yaml here.
   - brew:
       formula:
+        - jenv
         - maven
         - grpcurl
   - exec:
