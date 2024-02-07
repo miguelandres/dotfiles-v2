@@ -33,9 +33,6 @@ steps:
         - scala
         - scio
   - exec:
-    - cmd: jenv enable-plugin gradle
-      description: Enable gradle plugin for `jenv`
-      skip_in_ci: true
     - cmd: jenv add /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
       description: Add temurin21 to jenv
       skip_in_ci: true
