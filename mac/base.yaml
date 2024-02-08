@@ -7,7 +7,7 @@ defaults:
     force: true
     relink: true
   brew:
-    force_casks: true
+    adopt_casks: true
 
 steps:
   - link:

@@ -1,6 +1,6 @@
 defaults:
   brew:
-    force_casks: true
+    adopt_casks: true
 
 steps:
   - brew:
