@@ -62,8 +62,8 @@
 					<string>source ~/.zprofile
 source ~/.zshrc
 
-cd ~/Downloads
-youtube-dl -f best --external-downloader aria2c --external-downloader-args "-j 16 -x 16 -s 16 -k 1M" "$@"
+cd ~/Download
+yt-dlp -f best --external-downloader aria2c --external-downloader-args "-j 16 -x 16 -s 16 -k 1M" "$@"
 </string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>

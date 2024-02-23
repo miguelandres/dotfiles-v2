@@ -8,7 +8,7 @@ steps:
         - homebrew/cask-fonts
       formula:
         # stuff for youtube-dl
-        - youtube-dl
+        - yt-dlp
         - aria2
         - ffmpeg
       cask:
