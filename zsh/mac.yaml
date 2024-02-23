@@ -3,7 +3,7 @@ defaults:
     create_parent_dirs: true
     force: true
   brew:
-    force_casks: true
+    adopt_casks: true
 
 steps:
   - link:
