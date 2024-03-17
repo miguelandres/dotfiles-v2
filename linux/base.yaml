@@ -8,6 +8,8 @@ defaults:
     relink: true
 
 steps:
+  - exec:
+      - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   - apt:
       package:
         # Command line basics
