@@ -2,4 +2,4 @@ steps:
   - apt:
       package:
         - docker
-        - docker-compose
+        - docker-compose-plugin

@@ -1,8 +1,8 @@
 steps:
   - exec:
-      - cmd: sudo docker-compose -f portainer/docker-compose.yml up -d
+      - cmd: sudo docker compose -f portainer/docker-compose.yml up -d
         description: Set up portainer container
-      - cmd: sudo docker-compose -f homepage/docker-compose.yml up -d
+      - cmd: sudo docker compose -f homepage/docker-compose.yml up -d
         description: Set up homepage container
-      - cmd: sudo docker-compose -f airconnect/docker-compose.yml up -d
+      - cmd: sudo docker compose -f airconnect/docker-compose.yml up -d
         description: Set up AirConnect to use airplay across all speakers
