@@ -10,6 +10,7 @@ defaults:
 steps:
   - exec:
       - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      - bash <(curl -sL get-comby.netlify.app)
   - apt:
       package:
         # Command line basics
