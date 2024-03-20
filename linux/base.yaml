@@ -10,7 +10,6 @@ defaults:
 steps:
   - exec:
       - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-      - bash <(curl -sL get-comby.netlify.app)
   - apt:
       package:
         # Command line basics
@@ -21,6 +20,8 @@ steps:
         - tmux
         - vim
         - zsh
+        - zsh-autosuggestions
+        - zsh-syntax-highlighting
         # Programming
         - default-jdk
         - kotlin
@@ -29,3 +30,10 @@ steps:
         - ruby
         - scala
         - uidmap
+        # libraries
+        - libpcre3-dev
+        - libev4
+        - cifs-utils
+
+  - exec:
+      - bash <(curl -sL get-comby.netlify.app)

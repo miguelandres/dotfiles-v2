@@ -19,4 +19,4 @@ pushInsteadOf = https://github.com/
 [commit]
   cleanup = scissors
 [init]
-	defaultBranch = main
+  defaultBranch = main
