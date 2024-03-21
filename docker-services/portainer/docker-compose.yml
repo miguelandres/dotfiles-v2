@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
   portainer_agent:
     container_name: portainer_agent
