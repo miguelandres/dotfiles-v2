@@ -9,9 +9,17 @@ defaults:
 
 steps:
   - exec:
-      - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      - |
+        [[ -z $(command -v rustup) ]] || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      - ./docker-install.sh
   - apt:
       package:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-compose-plugin
+        - dbus-user-session
         # Command line basics
         - fzf
         - git
@@ -34,6 +42,11 @@ steps:
         - libpcre3-dev
         - libev4
         - cifs-utils
-
   - exec:
       - bash <(curl -sL get-comby.netlify.app)
+      - sudo systemctl disable --now docker.service docker.socket
+      - dockerd-rootless-setuptool.sh install
+      - sudo setcap cap_net_bind_service=ep $(which rootlesskit)
+      - sudo loginctl enable-linger $(whoami)
+      - systemctl --user start docker.service
+      - systemctl --user enable docker.service
