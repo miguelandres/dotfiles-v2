@@ -1,5 +1,10 @@
 steps:
+  - exec:
+      - ./docker-install.sh
   - apt:
       package:
-        - docker
-        - docker-compose
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-compose-plugin
