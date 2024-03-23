@@ -1,0 +1,21 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - apt:
+      package:
+        - linux-generic-hwe-22.04
+        - i965-va-driver
+        - intel-gpu-tools
+        - ubuntu-restricted-addons
+        - va-driver-all
+        - vainfo
+  - exec:
+      - sudo ln -s i915.conf /etc/modprobe.d/i915.conf
+      - sudo update-initramfs -u -k all

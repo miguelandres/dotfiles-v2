@@ -10,4 +10,5 @@ defaults:
 steps:
   - subconfig:
       - linux.yaml
-      - linux/standard.yaml
+      - linux/intel-quicksync.yaml
+      - docker-services/apiary-services.yaml

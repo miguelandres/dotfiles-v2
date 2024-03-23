@@ -10,7 +10,9 @@ defaults:
 steps:
   - exec:
       - |
-        [[ -z $(command -v rustup) ]] || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        if [[ $(command -v rustup) -ne 0 ]]; then
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        fi
       - ./docker-install.sh
   - apt:
       package:
@@ -43,10 +45,7 @@ steps:
         - libev4
         - cifs-utils
   - exec:
-      - bash <(curl -sL get-comby.netlify.app)
-      - sudo systemctl disable --now docker.service docker.socket
-      - dockerd-rootless-setuptool.sh install
-      - sudo setcap cap_net_bind_service=ep $(which rootlesskit)
-      - sudo loginctl enable-linger $(whoami)
-      - systemctl --user start docker.service
-      - systemctl --user enable docker.service
+      - sudo systemctl enable --now docker.service docker.socket containerd.service
+      - sudo systemctl start --now docker.service docker.socket containerd.service
+      - sudo groupadd docker || echo "docker group already exists"
+      - sudo usermod -aG docker $(whoami)
