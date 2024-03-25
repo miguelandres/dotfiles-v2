@@ -3,6 +3,7 @@ defaults:
     create_parent_dirs: true
   exec:
     echo: true
+    skip_in_ci: true
   link:
     force: true
     relink: true
@@ -15,6 +16,7 @@ steps:
         fi
       - ./docker-install.sh
   - apt:
+      skip_in_ci: true
       package:
         - docker-ce
         - docker-ce-cli

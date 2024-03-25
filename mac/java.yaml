@@ -20,6 +20,7 @@ steps:
         - temurin17
         - temurin21
   - brew:
+      skip_in_ci: true
       tap:
         - miguelandres/homebrew-tap
         - spotify/public
