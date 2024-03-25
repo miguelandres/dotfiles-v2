@@ -91,7 +91,6 @@ steps:
         - dockutil
         - switchaudio-osx
         # Other stuff
-        - alda
         - dezoomify-rs
         - exiftool
         - graphviz
