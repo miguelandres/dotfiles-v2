@@ -106,6 +106,7 @@ steps:
         - google-chrome
         - font-meslo-lg-nerd-font
         - iterm2
+        - obsidian
         # Communication
         - discord
         - signal
