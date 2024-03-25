@@ -35,7 +35,6 @@ steps:
         - git
         - gh
         - hub
-        - pre-commit
         # Other stuff
         - comby
         - openssl
@@ -62,6 +61,7 @@ steps:
         - gopls
         - openssl
         - php # only here because of fucking php alfred workflows
+        - pre-commit
         - python3
         - rbenv
         - ruby
