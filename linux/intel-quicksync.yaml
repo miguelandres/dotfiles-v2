@@ -19,3 +19,7 @@ steps:
   - exec:
       - sudo ln -s i915.conf /etc/modprobe.d/i915.conf
       - sudo update-initramfs -u -k all
+      # Disable apparmor which causes issues with sharing /dev/dri on docker
+      - sudo systemctl disable apparmor.service --now
+      - sudo systemctl stop apparmor.service
+      - sudo service apparmor stop
