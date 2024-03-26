@@ -21,9 +21,9 @@ jobs:
           - name: linux
             gh_env: ubuntu-latest
           - name: mac-personal-migue
-            gh_env: macos-13
+            gh_env: macos-latest
           - name: mac-personal-mati
-            gh_env: macos-13
+            gh_env: macos-latest
           - name: mac-work
             gh_env: macos-13
 
@@ -40,11 +40,15 @@ jobs:
         run: |
           brew tap miguelandres/homebrew-tap
           brew install dotfiles-rs
+      - if: matrix.target.gh_env == 'macos-latest'
+        name: Preinstall python
+        run: |
+          brew install python || echo "error installing python,"
+          brew link --overwrite python
       - name: Apply config ${{ matrix.target.name }}
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
-          brew link --overwrite python
           dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
           echo "=========================================="
           echo "Running dotfiles again to test idempotence"
