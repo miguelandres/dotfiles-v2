@@ -21,11 +21,11 @@ jobs:
           - name: linux
             gh_env: ubuntu-latest
           - name: mac-personal-migue
-            gh_env: macos-latest
+            gh_env: macos-13
           - name: mac-personal-mati
-            gh_env: macos-latest
+            gh_env: macos-13
           - name: mac-work
-            gh_env: macos-latest
+            gh_env: macos-13
 
     env:
       RUST_BACKTRACE: full
@@ -44,7 +44,6 @@ jobs:
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
-          brew install --keg-only python
           dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
           echo "=========================================="
           echo "Running dotfiles again to test idempotence"
