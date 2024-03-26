@@ -43,8 +43,11 @@ jobs:
       - if: matrix.target.gh_env == 'macos-latest'
         name: Preinstall python
         run: |
-          brew install python || echo "error installing python,"
+          brew install python || echo "error installing python"
           brew link --overwrite python
+
+          brew install go || echo "error installing go"
+          brew link --overwrite go
       - name: Apply config ${{ matrix.target.name }}
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
