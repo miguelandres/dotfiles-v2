@@ -25,7 +25,7 @@ jobs:
           - name: mac-personal-mati
             gh_env: macos-latest
           - name: mac-work
-            gh_env: macos-13
+            gh_env: macos-latest
 
     env:
       RUST_BACKTRACE: full
