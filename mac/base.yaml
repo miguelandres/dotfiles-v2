@@ -47,6 +47,28 @@ steps:
         - zsh-autosuggestions
         - zsh-completions
         - zsh-syntax-highlighting
+        # Programming languages & Tools
+        # - bazel has been moved to bazelisk on mac and bazel on linux
+        - act
+        - buildifier
+        - go
+        - gopls
+        - openssl
+        - php # only here because of fucking php alfred workflows
+        - pre-commit
+        - python3
+        - rbenv
+        - ruby
+        - rustup
+        - vim
+        # Linters
+        - markdownlint-cli
+        - pylint
+        - yapf
+        # Other
+        - hugo
+        # Necessary for Hugo stuff
+        - sass/sass/sass
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # Some of these formulae either take too long to install or just
