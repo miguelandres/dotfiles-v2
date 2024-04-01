@@ -31,6 +31,7 @@ steps:
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
+        - vim
         # Version control
         - git
         - gh
@@ -48,7 +49,6 @@ steps:
         - zsh-completions
         - zsh-syntax-highlighting
         # Programming languages & Tools
-        # - bazel has been moved to bazelisk on mac and bazel on linux
         - act
         - buildifier
         - go
@@ -60,7 +60,7 @@ steps:
         - rbenv
         - ruby
         - rustup
-        - vim
+        - typescript
         # Linters
         - markdownlint-cli
         - pylint
