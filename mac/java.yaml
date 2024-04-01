@@ -20,7 +20,7 @@ steps:
         - temurin17
         - temurin21
   - brew:
-      skip_in_ci: true
+      # This is a separate brew directive so that java has been installed above
       tap:
         - miguelandres/homebrew-tap
         - spotify/public
