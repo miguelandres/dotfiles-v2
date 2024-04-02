@@ -71,7 +71,6 @@ steps:
         - sass/sass/sass
   - brew:
       tap:
-        - homebrew/cask
         - homebrew/cask-fonts
         - miguelandres/homebrew-tap
         - spotify/public
