@@ -66,6 +66,7 @@ steps:
         - pylint
         - yapf
         # Other
+        - baobab # kinda like disk-inventory-x
         - hugo
         # Necessary for Hugo stuff
         - sass/sass/sass
@@ -110,6 +111,7 @@ steps:
         - vlc
         # Helpful tools
         - disk-inventory-x
+        - omnidisksweeper # kinda like disk-inventory-x
         - logi-options-plus
         - mysides
   - brew:
@@ -119,8 +121,6 @@ steps:
       # `mas` actions should never be run in CI since they depend on a
       # Mac App Store login.
       skip_in_ci: true
-      cask:
-        - basictex
       mas:
         # Chat & Communication
         KakaoTalk: 869223134
