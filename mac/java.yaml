@@ -16,8 +16,9 @@ steps:
         # for different versions of temurin
         - homebrew/cask-versions
       cask:
-        - temurin17
-        - temurin21
+        - temurin@11
+        - temurin@17
+        - temurin@21
   - brew:
       # This is a separate brew directive so that java has been installed above
       tap:
