@@ -16,7 +16,6 @@ steps:
         # for different versions of temurin
         - homebrew/cask-versions
       cask:
-        - temurin11
         - temurin17
         - temurin21
   - brew:
