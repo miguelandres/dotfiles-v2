@@ -1,5 +1,7 @@
 steps:
   - exec:
+      - cmd: docker compose -f isponsorblocktv/docker-compose.yml up -d
+        description: Set up iSpopnsorBlockTV container
       - cmd: docker compose -f portainer/docker-compose.yml up -d
         description: Set up portainer container
       - cmd: docker compose -f homepage/docker-compose.yml up -d
