@@ -12,9 +12,6 @@ defaults:
 steps:
   - brew:
       adopt_casks: true
-      tap:
-        # for different versions of temurin
-        - homebrew/cask-versions
       cask:
         - temurin@11
         - temurin@17
