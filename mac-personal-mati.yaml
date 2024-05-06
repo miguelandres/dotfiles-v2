@@ -10,13 +10,13 @@ defaults:
 steps:
   - subconfig:
       - base.yaml
+      - mac/java.yaml
+      - mac/base.yaml
       - zsh/base.yaml
       - zsh/mac.yaml
       - git/mati.yaml
       - tmux/tmux.yaml
       - vim/vim.yaml
-      - mac/java.yaml
-      - mac/base.yaml
       - mac/personal.yaml
   - exec:
       - cmd: ./mac/defaults/mati.sh

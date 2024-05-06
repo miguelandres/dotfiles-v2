@@ -10,12 +10,12 @@ defaults:
 steps:
   - subconfig:
       - base.yaml
+      - mac/base.yaml
       - zsh/base.yaml
       - zsh/mac.yaml
       - zsh/docker.yaml
       - tmux/tmux.yaml
       - vim/vim.yaml
-      - mac/base.yaml
       # Java installation for work is separate and not one of the base packages
       # so we don't call into mac/java.yaml here.
   - brew:
