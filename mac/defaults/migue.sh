@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
 
 SCRIPT=$(readlink -f $0)
+
 read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
 if [[ $? -gt 128 ]] ; then
   echo "Timed out. Skipping this script."
@@ -123,9 +124,6 @@ dockutil --add "/System/Applications/Home.app" --no-restart
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
-
-# Hide Spotlight tray-icon (and subsequent helper)
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Change indexing order and disable some search results
 # Yosemite-specific search results (remove them if you are using macOS 10.9 or older):
