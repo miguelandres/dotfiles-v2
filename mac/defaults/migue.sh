@@ -100,7 +100,7 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 
 dockutil --remove all --no-restart
 dockutil --add "/Applications/Safari.app" --no-restart
-dockutil --add "/Applications/Google Chrome.app" --no-restart
+dockutil --add "/Applications/Firefox.app" --no-restart
 dockutil --add "/System/Applications/Messages.app" --no-restart
 dockutil --add "/Applications/Dashlane.app" --no-restart
 dockutil --add "/System/Applications/Calendar.app" --no-restart
