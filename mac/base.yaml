@@ -73,7 +73,6 @@ steps:
         - sass/sass/sass
   - brew:
       tap:
-        - homebrew/cask-fonts
         - miguelandres/homebrew-tap
         - spotify/public
       formula:

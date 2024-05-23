@@ -4,8 +4,6 @@ defaults:
 
 steps:
   - brew:
-      tap:
-        - homebrew/cask-fonts
       formula:
         # stuff for youtube-dl
         - yt-dlp
