@@ -87,7 +87,6 @@ steps:
         # Other stuff
         - dezoomify-rs
         - exiftool
-        - firefox-profile-switcher-connector
         - kubernetes-cli
         - graphviz
       cask:
