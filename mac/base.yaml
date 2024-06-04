@@ -115,7 +115,6 @@ steps:
         - omnidisksweeper # kinda like disk-inventory-x
         - logi-options-plus
         - mysides
-        - qmk/qmk/qmk
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # Some of these formulae and casks either take too long to install or just
