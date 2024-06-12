@@ -19,7 +19,6 @@ steps:
   - brew:
       # This is a separate brew directive so that java has been installed above
       tap:
-        - miguelandres/homebrew-tap
         - spotify/public
       formula:
         # Programming languages & Tools
