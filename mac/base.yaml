@@ -27,10 +27,6 @@ steps:
         skip_in_ci: true
         description: Installing useful Automator Workflows as Services.
   - brew:
-      tap:
-        - miguelandres/homebrew-tap
-        - spotify/public
-        - null-dev/firefox-profile-switcher
       formula:
         - vim
         # Version control
@@ -72,9 +68,6 @@ steps:
         # Necessary for Hugo stuff
         - sass/sass/sass
   - brew:
-      tap:
-        - miguelandres/homebrew-tap
-        - spotify/public
       formula:
         # This is bazelisk on mac, bazel on linux
         - bazelisk
@@ -107,7 +100,6 @@ steps:
         - signal
         # Media
         - netnewswire
-        - spotify
         - steam
         - vlc
         # Helpful tools
