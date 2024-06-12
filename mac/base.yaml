@@ -30,6 +30,7 @@ steps:
       tap:
         - miguelandres/homebrew-tap
         - spotify/public
+        - null-dev/firefox-profile-switcher
       formula:
         - vim
         # Version control
@@ -72,7 +73,6 @@ steps:
         - sass/sass/sass
   - brew:
       tap:
-        - homebrew/cask-fonts
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
@@ -87,6 +87,7 @@ steps:
         # Other stuff
         - dezoomify-rs
         - exiftool
+        - kubernetes-cli
         - graphviz
       cask:
         # Programming stuff
@@ -97,6 +98,7 @@ steps:
         # Basics
         - alfred
         - google-chrome
+        - firefox
         - font-meslo-lg-nerd-font
         - iterm2
         - obsidian

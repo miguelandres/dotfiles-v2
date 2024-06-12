@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
 
 SCRIPT=$(readlink -f $0)
+
 read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
 if [[ $? -gt 128 ]] ; then
   echo "Timed out. Skipping this script."
@@ -34,8 +35,8 @@ done 2>/dev/null &
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-# Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# Enable “natural” (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 ###############################################################################
 # Screen                                                                      #
@@ -58,7 +59,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Use list view in all Finder windows by default
+# Use Column view in all Finder windows by default
 # Four-letter codes for view modes: Icon `icnv`, Column `clmv`, Gallery `glyv`, List "Nlsv"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
@@ -97,30 +98,32 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Uncomment when https://github.com/kcrawford/dockutil/issues/146 is fixed
 
-# dockutil --remove all --no-restart
-# dockutil --add "/Applications/Safari.app" --no-restart
-# dockutil --add "/Applications/Google Chrome.app" --no-restart
-# dockutil --add "/Applications/Adobe Lightroom CC/Adobe Lightroom.app" --no-restart
-# dockutil --add "/System/Applications/Messages.app" --no-restart
-# dockutil --add "/Applications/Dashlane.app" --no-restart
-# dockutil --add "/Applications/Visual Studio Code.app" --no-restart
-# dockutil --add "/Applications/iTerm.app" --no-restart
-# dockutil --add "/Applications/Parcel.app" --no-restart
-# dockutil --add "/Applications/Things3.app" --no-restart
-# dockutil --add "/System/Applications/Notes.app" --no-restart
-# dockutil --add "/System/Applications/Music.app" --no-restart
-# dockutil --add "/Applications/Discord.app" --no-restart
-# dockutil --add "/Applications/Signal.app" --no-restart
-# dockutil --add "/Applications/WhatsApp.app" --no-restart
-# dockutil --add "/Applications/NetNewsWire.app" --no-restart
-# dockutil --add "/System/Applications/App Store.app" --no-restart
+dockutil --remove all --no-restart
+dockutil --add "/Applications/Safari.app" --no-restart
+dockutil --add "/Applications/Firefox.app" --no-restart
+dockutil --add "/System/Applications/Messages.app" --no-restart
+dockutil --add "/Applications/Dashlane.app" --no-restart
+dockutil --add "/System/Applications/Calendar.app" --no-restart
+dockutil --add "/Applications/iTerm.app" --no-restart
+dockutil --add "/Applications/Parcel.app" --no-restart
+dockutil --add "/System/Applications/Music.app" --no-restart
+dockutil --add "/Applications/Microsoft Outlook.app" --no-restart
+dockutil --add "/Applications/Discord.app" --no-restart
+dockutil --add "/Applications/LINE.app" --no-restart
+dockutil --add "/Applications/KakaoTalk.app" --no-restart
+dockutil --add "/Applications/WeChat.app" --no-restart
+dockutil --add "/Applications/Signal.app" --no-restart
+dockutil --add "/Applications/WhatsApp.app" --no-restart
+dockutil --add "/Applications/Obsidian.app" --no-restart
+dockutil --add "/Applications/NetNewsWire.app" --no-restart
+dockutil --add "/Applications/Copilot.app" --no-restart
+dockutil --add "/System/Applications/App Store.app" --no-restart
+dockutil --add "/Applications/Visual Studio Code.app" --no-restart
+dockutil --add "/System/Applications/Home.app" --no-restart
 
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
-
-# Hide Spotlight tray-icon (and subsequent helper)
-#sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Change indexing order and disable some search results
 # Yosemite-specific search results (remove them if you are using macOS 10.9 or older):

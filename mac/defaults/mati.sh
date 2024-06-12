@@ -3,6 +3,7 @@
 # ~/.macos — https://mths.be/macos
 
 SCRIPT=$(readlink -f $0)
+
 read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
 if [[ $? -gt 128 ]] ; then
   echo "Timed out. Skipping this script."
