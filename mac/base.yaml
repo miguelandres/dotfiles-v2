@@ -47,6 +47,7 @@ steps:
         - zsh-syntax-highlighting
         # Programming languages & Tools
         - act
+        - angular-cli
         - buildifier
         - go
         - gopls
