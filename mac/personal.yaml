@@ -4,16 +4,18 @@ defaults:
 
 steps:
   - brew:
-      tap:
-        - homebrew/cask-fonts
       formula:
         # stuff for youtube-dl
         - yt-dlp
         - aria2
         - ffmpeg
       cask:
-        - adobe-creative-cloud
         - intellij-idea-ce
+        # photography and media
+        - affinity-photo
+        - affinity-designer
+        - affinity-publisher
+        - darktable
         # streaming and screen recording
         - obs
         - blackhole-2ch
@@ -23,9 +25,11 @@ steps:
       # Mac App Store login.
       skip_in_ci: true
       mas:
+        Darkroom: 953286746
         # Chat & Communication
         Wechat: 836500024
         # Office
         Excel: 462058435
-        PowerPoint: 462062816
+        # Who really needs this?
+        # PowerPoint: 462062816
         Word: 462054704
