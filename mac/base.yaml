@@ -91,6 +91,7 @@ steps:
         - sourcetree
         # Basics
         - alfred
+        - alt-tab
         - google-chrome
         - firefox
         - font-meslo-lg-nerd-font
