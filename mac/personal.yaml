@@ -9,6 +9,7 @@ steps:
         - yt-dlp
         - aria2
         - ffmpeg
+        - libdvdcss
       cask:
         - intellij-idea-ce
         # photography and media
@@ -19,6 +20,7 @@ steps:
         # streaming and screen recording
         - obs
         - blackhole-2ch
+        - handbrake
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # `mas` actions should never be run in CI since they depend on a
