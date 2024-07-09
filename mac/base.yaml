@@ -55,6 +55,7 @@ steps:
         - php # only here because of fucking php alfred workflows
         - pre-commit
         - python3
+        - pipx
         - rbenv
         - ruby
         - rustup
