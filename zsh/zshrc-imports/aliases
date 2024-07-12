@@ -24,3 +24,52 @@ function fv() {
 }
 
 alias resource="source ~/.zshrc"
+
+# Gradle helpers
+function lintbuild() {
+  tasks=$(gradle tasks)
+  countFlywayTasks=$(echo "$tasks" | grep flywayMigrate |wc -l)
+  spotlessTasks=$(echo "$tasks" | grep spotlessApply |wc -l)
+  ktlintFormatTasks=$(echo "$tasks" | grep ktlintFormat |wc -l)
+  excludePrefix=
+  flyway=
+  formatTask=
+  if [[ $countFlywayTasks -ne 0 ]]
+  then
+    excludePrefix=--exclude-task
+    flyway=flywayMigrate
+    echo "Excluding flyway migrate task"
+  else
+    echo "Didn't find flyway migrate"
+  fi
+
+  if [[ $ktlintFormatTasks -ne 0 ]]
+  then
+    format=ktlintFormat
+    echo "Using ktlintFormat"
+  elif [[ $spotlessTasks -ne 0 ]]
+  then
+    format=spotlessApply
+    echo "Using spotlessApply"
+  fi
+
+  if [[ -n $format ]]
+  then
+    gradle $excludePrefix $flyway $format $@
+  fi
+  gradle build $@
+}
+
+function clb() {
+  gradle clean $@
+  lintbuild $@
+}
+
+function cb() {
+  gradle clean $@
+  gradle build $@
+}
+
+function lb() {
+  lintbuild $@
+}
