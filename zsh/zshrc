@@ -80,7 +80,6 @@ plugins=(
   gitignore
   history
   jsontools
-  rust
   scala
   tmux
   zsh-interactive-cd
