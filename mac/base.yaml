@@ -52,7 +52,6 @@ steps:
         - go
         - gopls
         - openssl
-        - php # only here because of fucking php alfred workflows
         - pre-commit
         - python3
         - pipx
@@ -91,7 +90,6 @@ steps:
         - textmate
         - sourcetree
         # Basics
-        - alfred
         - alt-tab
         - google-chrome
         - firefox
