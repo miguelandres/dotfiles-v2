@@ -11,12 +11,12 @@ steps:
   - subconfig:
       - base.yaml
       - mac/base.yaml
-      - mac/java.yaml
       - zsh/base.yaml
       - zsh/mac.yaml
       - zsh/docker.yaml
       - tmux/tmux.yaml
       - vim/vim.yaml
+      - mac/java.yaml
   - brew:
       formula:
         - jenv
