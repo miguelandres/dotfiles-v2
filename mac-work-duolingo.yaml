@@ -1,0 +1,15 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - subconfig:
+      - mac-work.yaml
+  - brew:
+      cask:
+        - git-credential-manager
