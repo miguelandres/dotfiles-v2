@@ -106,7 +106,6 @@ steps:
         # Helpful tools
         - disk-inventory-x
         - omnidisksweeper # kinda like disk-inventory-x
-        - logi-options-plus
         - mysides
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
