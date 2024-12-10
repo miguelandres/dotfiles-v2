@@ -106,6 +106,7 @@ steps:
         - disk-inventory-x
         - omnidisksweeper # kinda like disk-inventory-x
         - mysides
+        - raycast
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # Some of these formulae and casks either take too long to install or just
@@ -114,16 +115,8 @@ steps:
       # Mac App Store login.
       skip_in_ci: true
       mas:
-        # Chat & Communication
-        KakaoTalk: 869223134
-        LINE: 539883307
-        Messenger: 1480068668
-        Telegram: 747648890
-        WhatsApp: 310633997
-        Wechat: 836500024
         # Notetaking & Organization
         GoodNotes: 1444383602
-        OneNote: 784801555
         Things: 904280696
         # Utilities
         Dashlane: 517914548
