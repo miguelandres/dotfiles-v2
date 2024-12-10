@@ -1,0 +1,10 @@
+defaults:
+  link:
+    create_parent_dirs: true
+    force: true
+
+steps:
+  - link:
+      - ~/.zshrc-imports/.zshrc-work: zshrc-imports/zshrc-work
+      - ~/.zshrc-imports/.aliases-work: zshrc-imports/aliases-work
+      - ~/.zshrc-imports/plugins/work: zshrc-imports/plugins/work
