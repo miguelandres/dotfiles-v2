@@ -1,0 +1,22 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - subconfig:
+      - linux.yaml
+      - zsh/work.yaml
+  - brew:
+      formula:
+        - jenv
+        - maven
+        - grpcurl
+  - exec:
+      - cmd: ./mac/defaults/migue.sh
+        skip_in_ci: true
+        description: Running Migue's specific default configs
