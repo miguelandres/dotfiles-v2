@@ -36,8 +36,6 @@ steps:
         - zsh-syntax-highlighting
         # Programming
         - default-jdk
-        - kotlin
-        - pre-commit
         - python3
         - ruby
         - scala
