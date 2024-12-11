@@ -18,7 +18,3 @@ steps:
       - git/personal.yaml
       - tmux/tmux.yaml
       - vim/vim.yaml
-  - exec:
-      - cmd: ./mac/defaults/migue.sh
-        skip_in_ci: true
-        description: Running Migue's specific default configs
