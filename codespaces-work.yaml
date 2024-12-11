@@ -9,13 +9,15 @@ defaults:
 
 steps:
   - subconfig:
-      - linux.yaml
+      - base.yaml
+      - linux/base.yaml
+      - zsh/base.yaml
+      - zsh/linux.yaml
+      - zsh/docker.yaml
       - zsh/work.yaml
-  - brew:
-      formula:
-        - jenv
-        - maven
-        - grpcurl
+      - git/personal.yaml
+      - tmux/tmux.yaml
+      - vim/vim.yaml
   - exec:
       - cmd: ./mac/defaults/migue.sh
         skip_in_ci: true
