@@ -12,6 +12,7 @@ steps:
       - base.yaml
       - github-keys.yaml
       - linux/base.yaml
+      - linux/personal.yaml
       - zsh/base.yaml
       - zsh/linux.yaml
       - zsh/docker.yaml

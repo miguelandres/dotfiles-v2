@@ -9,21 +9,9 @@ defaults:
     relink: true
 
 steps:
-  - exec:
-      - |
-        if [[ $(command -v rustup) -ne 0 ]]; then
-          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-        fi
-      - ./docker-install.sh
   - apt:
       skip_in_ci: true
       package:
-        - docker-ce
-        - docker-ce-cli
-        - containerd.io
-        - docker-buildx-plugin
-        - docker-compose-plugin
-        - dbus-user-session
         # Command line basics
         - fzf
         - git
@@ -34,18 +22,3 @@ steps:
         - zsh
         - zsh-autosuggestions
         - zsh-syntax-highlighting
-        # Programming
-        - default-jdk
-        - python3
-        - ruby
-        - scala
-        - uidmap
-        # libraries
-        - libpcre3-dev
-        - libev4
-        - cifs-utils
-  - exec:
-      - sudo systemctl enable --now docker.service docker.socket containerd.service
-      - sudo systemctl start --now docker.service docker.socket containerd.service
-      - sudo groupadd docker || echo "docker group already exists"
-      - sudo usermod -aG docker $(whoami)
