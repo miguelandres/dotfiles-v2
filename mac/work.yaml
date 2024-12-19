@@ -1,0 +1,16 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  exec:
+    echo: true
+  link:
+    force: true
+    relink: true
+  brew:
+    adopt_casks: true
+
+steps:
+  - brew:
+      cask:
+        - datagrip
+        - postman
