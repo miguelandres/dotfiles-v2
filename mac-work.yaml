@@ -11,6 +11,7 @@ steps:
   - subconfig:
       - base.yaml
       - mac/base.yaml
+      - mac/work.yaml
       - zsh/base.yaml
       - zsh/mac.yaml
       - zsh/work.yaml

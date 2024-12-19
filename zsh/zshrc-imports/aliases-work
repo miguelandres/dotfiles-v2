@@ -1,0 +1,1 @@
+alias cw="awslogs get --no-group --no-stream --watch --timestamp --start='5m ago'"
