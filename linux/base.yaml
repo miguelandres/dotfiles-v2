@@ -9,6 +9,9 @@ defaults:
     relink: true
 
 steps:
+  - exec:
+      - cmd: sudo apt update
+        description: Update apt
   - apt:
       skip_in_ci: true
       package:
