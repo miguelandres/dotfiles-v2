@@ -102,3 +102,10 @@ bindkey -M vicmd 'j' history-substring-search-down
 for file in ~/.zshrc-imports/.*; do
   source "$file"
 done
+
+# bun completions
+[ -s "/Users/miguely/.bun/_bun" ] && source "/Users/miguely/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
