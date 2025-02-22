@@ -54,6 +54,7 @@ steps:
         - openssl
         - pre-commit
         - python3
+        - pyenv
         - pipx
         - rbenv
         - ruby
