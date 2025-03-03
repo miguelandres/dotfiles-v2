@@ -108,6 +108,10 @@ steps:
         - omnidisksweeper # kinda like disk-inventory-x
         - mysides
         - raycast
+        - typst
+        - font-roboto
+        - font-source-sans-3
+        - font-fontawesome
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # Some of these formulae and casks either take too long to install or just
