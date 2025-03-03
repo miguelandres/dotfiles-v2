@@ -89,6 +89,8 @@ steps:
         - exiftool
         - kubernetes-cli
         - graphviz
+        - typst
+        - typstyle
       cask:
         # Programming stuff
         - github
@@ -114,8 +116,6 @@ steps:
         - mysides
         - raycast
         # Typesetting
-        - typst
-        - typstyle
         - font-roboto
         - font-source-sans-3
         - font-fontawesome
