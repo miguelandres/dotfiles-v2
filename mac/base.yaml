@@ -69,6 +69,10 @@ steps:
         - hugo
         # Necessary for Hugo stuff
         - sass/sass/sass
+        # typst
+        - typst
+        - typstfmt
+
   - brew:
       formula:
         # This is bazelisk on mac, bazel on linux
@@ -108,7 +112,6 @@ steps:
         - omnidisksweeper # kinda like disk-inventory-x
         - mysides
         - raycast
-        - typst
         - font-roboto
         - font-source-sans-3
         - font-fontawesome
