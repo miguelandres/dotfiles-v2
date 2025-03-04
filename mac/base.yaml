@@ -72,6 +72,7 @@ steps:
         # typst
         - typst
         - typstfmt
+        - typstyle
 
   - brew:
       formula:
