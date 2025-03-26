@@ -45,3 +45,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="$(brew --prefix)/share/zsh-syntax-highlighting/h
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Load jj autocompletions
+source <(COMPLETE=zsh jj)

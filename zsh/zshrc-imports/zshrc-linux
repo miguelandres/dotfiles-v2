@@ -9,6 +9,10 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # This file is not present in apt-get in raspbian, but it still works
 # shellcheck disable=SC1091
 source /usr/share/doc/fzf/examples/completion.zsh 2>/dev/null
+
+# Load jj autocompletions
+source <(COMPLETE=zsh jj)
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/share/zsh-syntax-highlighting/highlighters"
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR
 export PATH=$PATH:/snap/bin:~/.local/bin
