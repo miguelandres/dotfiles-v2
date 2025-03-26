@@ -12,6 +12,8 @@ steps:
   - exec:
       - cmd: sudo apt update
         description: Update apt
+      - cmd: curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+        description: Install cargo-binstall
   - apt:
       skip_in_ci: true
       package:
@@ -25,3 +27,6 @@ steps:
         - zsh
         - zsh-autosuggestions
         - zsh-syntax-highlighting
+  - exec:
+      - cmd: cargo binstall -y --strategies crate-meta-data jj-cli
+        description: Install jj-cli
