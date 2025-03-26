@@ -20,7 +20,7 @@ else
 fi
 
 BREW_PREFIX=$(brew --prefix)
-PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$PATH
+PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$BREW_PREFIX/opt/python3/libexec/bin/:$PATH
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
