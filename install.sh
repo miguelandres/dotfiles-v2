@@ -6,3 +6,10 @@
 ./dotfiles install-oh-my-zsh
 ./dotfiles apply-config codespaces-work.yaml
 source ~/.zshrc
+
+pushd "/workspaces/${RepositoryName}"
+GIT_REMOTE=$(git remote)
+jj git init --colocate
+# This branch tracking happens to work, but makes naming assumptions about refs.
+jj bookmark track $(git branch --format="%(upstream:lstrip=-1)@${GIT_REMOTE}")
+popd
