@@ -33,5 +33,4 @@ steps:
         - zsh-syntax-highlighting
   - exec:
       - cmd: cargo binstall -y --strategies crate-meta-data jj-cli
-        skip_in_ci: true
         description: Install jj-cli
