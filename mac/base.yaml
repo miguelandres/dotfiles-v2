@@ -33,6 +33,7 @@ steps:
         - git
         - gh
         - hub
+        - jj
         # Other stuff
         - comby
         - openssl
@@ -145,7 +146,3 @@ steps:
         # Office
         OneDrive: 823766827
         Outlook: 985367838
-  - exec:
-      - cmd: cargo binstall -y --strategies crate-meta-data jj-cli
-        skip_in_ci: true
-        description: Install jj-cli
