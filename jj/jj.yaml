@@ -1,0 +1,8 @@
+defaults:
+  link:
+    force: true
+    relink: true
+
+steps:
+  - link:
+      - ~/.jjconfig.toml: config.toml

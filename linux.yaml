@@ -17,5 +17,6 @@ steps:
       - zsh/linux.yaml
       - zsh/docker.yaml
       - git/personal.yaml
+      - jj/jj.yaml
       - tmux/tmux.yaml
       - vim/vim.yaml

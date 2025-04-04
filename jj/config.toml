@@ -1,0 +1,6 @@
+[user]
+name = "Miguel Barreto"
+email = "miguelandres@users.noreply.github.com"
+
+[git]
+push-bookmark-prefix = "miguely-"

@@ -20,6 +20,7 @@ steps:
       - vim/vim.yaml
       - mac/java.yaml
       - git/personal.yaml
+      - jj/jj.yaml
   - brew:
       formula:
         - jenv
