@@ -48,6 +48,10 @@ jobs:
 
           brew install go || echo "error installing go"
           brew link --overwrite go
+      - if: matrix.target.gh_env == 'ubuntu-latest'
+        name: change shell
+        run: |
+          chsh -s /bin/zsh
       - name: Apply config ${{ matrix.target.name }}
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
