@@ -51,7 +51,7 @@ jobs:
       - if: matrix.target.gh_env == 'ubuntu-latest'
         name: install zsh
         run: |
-          apt install zsh
+          sudo apt install zsh
       - name: Apply config ${{ matrix.target.name }}
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
