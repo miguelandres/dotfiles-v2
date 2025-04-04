@@ -49,15 +49,15 @@ jobs:
           brew install go || echo "error installing go"
           brew link --overwrite go
       - if: matrix.target.gh_env == 'ubuntu-latest'
-        name: change shell
+        name: install zsh
         run: |
-          chsh -s /bin/zsh
+          apt install zsh
       - name: Apply config ${{ matrix.target.name }}
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
-          dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
+          zsh -c "dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml"
           echo "=========================================="
           echo "Running dotfiles again to test idempotence"
           echo "=========================================="
-          dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
+          zsh -c "dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml"
