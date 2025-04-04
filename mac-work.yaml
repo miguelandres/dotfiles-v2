@@ -19,6 +19,7 @@ steps:
       - tmux/tmux.yaml
       - vim/vim.yaml
       - mac/java.yaml
+      - git/personal.yaml
   - brew:
       formula:
         - jenv
