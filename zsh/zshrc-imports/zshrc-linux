@@ -3,12 +3,8 @@
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Enables fzf
-# shellcheck disable=SC1091
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-# This file is not present in apt-get in raspbian, but it still works
-# shellcheck disable=SC1091
-source /usr/share/doc/fzf/examples/completion.zsh 2>/dev/null
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Load jj autocompletions
 source <(COMPLETE=zsh jj)
