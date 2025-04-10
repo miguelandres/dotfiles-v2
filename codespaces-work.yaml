@@ -21,3 +21,4 @@ steps:
       - vim/vim.yaml
   - exec:
       - jj config set --user ui.merge-editor "vscode"
+      - brew install withgraphite/tap/graphite
