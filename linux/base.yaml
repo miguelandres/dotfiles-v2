@@ -14,7 +14,7 @@ steps:
         description: Update apt
       - cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain none -y
         description: Install rustup
-      - cmd: rustup toolchain install nightly
+      - cmd: . "$HOME/.cargo/env"  && rustup toolchain install nightly
         description: install rust nightly
       - cmd: curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
         description: Install cargo-binstall
