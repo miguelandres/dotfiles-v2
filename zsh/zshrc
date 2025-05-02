@@ -72,10 +72,8 @@ plugins=(
   bazel
   common-aliases
   copypath
-  dirhistory
   extract
   fancy-ctrl-z
-  fasd
   gh
   git
   gitignore

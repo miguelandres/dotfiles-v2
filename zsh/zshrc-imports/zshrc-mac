@@ -1,11 +1,4 @@
 # shellcheck shell=bash
-# This is used to fix iTerm keyboard movement, see
-# https://coderwall.com/p/a8uxma/zsh-iterm2-osx-shortcuts
-
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
 
 HOMEBREW_FORCE_VENDOR_RUBY=1
 export HOMEBREW_FORCE_VENDOR_RUBY
