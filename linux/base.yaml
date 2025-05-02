@@ -32,7 +32,7 @@ steps:
         - zsh-autosuggestions
         - zsh-syntax-highlighting
   - exec:
-      - cmd: cargo binstall -y --strategies crate-meta-data jj-cli
+      - cmd: PATH=$PATH:~/.cargo/bin cargo binstall -y --strategies crate-meta-data jj-cli
         description: Install jj-cli
       - cmd: curl https://pyenv.run | bash
         description: Install pyenv
