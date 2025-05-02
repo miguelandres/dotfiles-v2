@@ -21,4 +21,6 @@ steps:
       - vim/vim.yaml
   - exec:
       - jj config set --user ui.merge-editor "vscode"
+      - echo >> /home/vscode/.zshrc
+      - echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/vscode/.zshrc
       - brew install withgraphite/tap/graphite
