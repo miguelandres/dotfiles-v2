@@ -27,8 +27,6 @@ steps:
         - git
         - gh
         - hub
-        - lazygit
-        - nvim
         - ripgrep
         - tmux
         - vim
