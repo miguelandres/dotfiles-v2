@@ -18,6 +18,7 @@ steps:
       - tmux/tmux.yaml
       - vim/vim.yaml
       - mac/personal.yaml
+      - nvim/nvim.yaml
   - exec:
       - cmd: ./mac/defaults/mati.sh
         skip_in_ci: true
