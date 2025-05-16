@@ -28,26 +28,29 @@ steps:
         description: Installing useful Automator Workflows as Services.
   - brew:
       formula:
+        - nvim
         - vim
         # Version control
         - git
         - gh
         - hub
+        - lazygit
         - jj
         # Other stuff
         - comby
         - openssl
         # Shell stuff
+        - fd
         - fzf
         - shellcheck
         - shfmt
+        - ripgrep
         - tmux
         - zsh
         - zsh-autosuggestions
         - zsh-completions
         - zsh-syntax-highlighting
         # Programming languages & Tools
-        - act
         - angular-cli
         - buildifier
         - cargo-binstall

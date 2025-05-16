@@ -1,0 +1,13 @@
+defaults:
+  create:
+    create_parent_dirs: true
+  link:
+    create_parent_dirs: true
+    force: true
+    relink: true
+
+steps:
+  - create:
+      - ~/.vim/bundle
+  - link:
+      - ~/.config/nvim: config

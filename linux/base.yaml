@@ -22,10 +22,14 @@ steps:
       skip_in_ci: true
       package:
         # Command line basics
+        - fd-find
         - fzf
         - git
         - gh
         - hub
+        - lazygit
+        - nvim
+        - ripgrep
         - tmux
         - vim
         - zsh
