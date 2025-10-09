@@ -2,3 +2,4 @@ alias cw="awslogs get --no-group --no-stream --watch --timestamp --start='5m ago
 alias prodaccess="duo sso"
 alias pa="duo sso"
 alias ds="duo sso"
+alias dsdp="duo sso duolingo-main/okta-area-data-pl-940168671796"
