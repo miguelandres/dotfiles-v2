@@ -15,18 +15,11 @@ fi
 BREW_PREFIX=$(brew --prefix)
 PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$BREW_PREFIX/opt/python3/libexec/bin/:$PATH
 
-export PATH="$HOME/.jenv/bin:$PATH"
+PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
 PATH=$(gem environment gemdir)/bin:$PATH
 ANDROID_SDK_ROOT=$BREW_PREFIX/share/android-commandlinetools
-LDFLAGS="-L$BREW_PREFIX/lib -L$BREW_PREFIX/opt/ruby/lib"
-CPPFLAGS="-I$BREW_PREFIX/include I$BREW_PREFIX/opt/ruby/include"
-PKG_CONFIG_PATH="$BREW_PREFIX/opt/openssl@3/lib/pkgconfig:$BREW_PREFIX/opt/ruby/lib/pkgconfig"
 SCALA_HOME=$BREW_PREFIX/opt/scala/idea
-export PKG_CONFIG_PATH
-export LDFLAGS
-export CPPFLAGS
 export PATH
 export ANDROID_SDK_ROOT
 export SCALA_HOME
