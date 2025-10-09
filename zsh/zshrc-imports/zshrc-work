@@ -1,1 +1,19 @@
 . "${HOME}/.duolingo/init.sh"
+
+# Make sure mysql_config and pg_config are on PATH for this shell:
+PATH="$(brew --prefix mysql-client)/bin:$PATH"
+PATH="$(brew --prefix libpq)/bin:$PATH"
+
+# Help the compiler/linker find headers & libs:
+
+CPPFLAGS="-I$(brew --prefix libpq)/include $CPPFLAGS"
+CPPFLAGS="-I$(brew --prefix mysql-client)/include $CPPFLAGS"
+LDFLAGS="-L$(brew --prefix libpq)/lib $LDFLAGS"
+LDFLAGS="-L$(brew --prefix mysql-client)/lib $LDFLAGS"
+PKG_CONFIG_PATH="$(brew --prefix libpq)/lib/pkgconfig:$PKG_CONFIG_PATH"
+PKG_CONFIG_PATH="$(brew --prefix mysql-client)/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+export PKG_CONFIG_PATH
+export LDFLAGS
+export CPPFLAGS
+export PATH
