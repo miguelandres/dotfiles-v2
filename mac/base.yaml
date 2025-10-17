@@ -103,7 +103,6 @@ steps:
         - textmate
         - sourcetree
         # Basics
-        - stats
         - google-chrome
         - firefox
         - font-meslo-lg-nerd-font
