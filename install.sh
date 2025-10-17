@@ -4,6 +4,9 @@
 
 ./download.sh x86_64-unknown-linux-musl
 ./dotfiles install-homebrew
+export PATH=$HOME/go/bin:$HOME/.cargo/env:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+export PATH=$PATH:/snap/bin:~/.local/bin
+source ~/.zshrc
 ./dotfiles apply-config codespaces-work.yaml
 source ~/.zshrc
 

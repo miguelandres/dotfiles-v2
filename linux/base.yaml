@@ -36,5 +36,5 @@ steps:
   - exec:
       - cmd: PATH=$PATH:~/.cargo/bin cargo binstall -y --strategies crate-meta-data jj-cli
         description: Install jj-cli
-      - cmd: curl https://pyenv.run | bash
+      - cmd: curl https://pyenv.run | bash || true
         description: Install pyenv

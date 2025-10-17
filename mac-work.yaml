@@ -27,6 +27,8 @@ steps:
         - jenv
         - maven
         - grpcurl
+        - mysql-client
+        - postgresql
   - exec:
       - cmd: ./mac/defaults/migue.sh
         skip_in_ci: true
