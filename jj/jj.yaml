@@ -1,8 +1,12 @@
 defaults:
+  create:
+    create_parent_dirs: true
   link:
     force: true
     relink: true
 
 steps:
+  - create:
+      - ~/.config/jj
   - link:
-      - ~/.jjconfig.toml: config.toml
+      - ~/.config/jj/config.toml: config.toml
