@@ -8,8 +8,10 @@ PATH="$(brew --prefix libpq)/bin:$PATH"
 
 CPPFLAGS="-I$(brew --prefix libpq)/include $CPPFLAGS"
 CPPFLAGS="-I$(brew --prefix mysql-client)/include $CPPFLAGS"
+CPPFLAGS="-I$(brew --prefix openssl)/include $CPPFLAGS"
 LDFLAGS="-L$(brew --prefix libpq)/lib $LDFLAGS"
 LDFLAGS="-L$(brew --prefix mysql-client)/lib $LDFLAGS"
+LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
 PKG_CONFIG_PATH="$(brew --prefix libpq)/lib/pkgconfig:$PKG_CONFIG_PATH"
 PKG_CONFIG_PATH="$(brew --prefix mysql-client)/lib/pkgconfig:$PKG_CONFIG_PATH"
 
