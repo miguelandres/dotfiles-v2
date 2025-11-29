@@ -119,6 +119,7 @@ steps:
         - steam
         - vlc
         # Helpful tools
+        - chatgpt
         - disk-inventory-x
         - omnidisksweeper # kinda like disk-inventory-x
         - mysides
