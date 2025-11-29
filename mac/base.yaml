@@ -135,6 +135,7 @@ steps:
       # Mac App Store login.
       skip_in_ci: true
       mas:
+        Parcel: 375589283
         # Notetaking & Organization
         GoodNotes: 1444383602
         Things: 904280696
