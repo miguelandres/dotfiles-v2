@@ -10,7 +10,7 @@ if [[ $? -gt 128 ]] ; then
   exit
 else
   case $yn in
-      [Yy]* ) break;;
+      [Yy]* ) ;;
       [Nn]* ) echo "Not running the script"; exit;;
       * ) echo "Not running the script"; exit;;
   esac
