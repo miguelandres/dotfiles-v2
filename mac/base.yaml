@@ -122,7 +122,6 @@ steps:
         - chatgpt
         - disk-inventory-x
         - omnidisksweeper # kinda like disk-inventory-x
-        - mysides
         - raycast
         # Typesetting
         - font-roboto

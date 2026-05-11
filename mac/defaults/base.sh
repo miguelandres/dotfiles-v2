@@ -177,7 +177,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 loggedInUser=$(/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }')
 
 # Adds Home Folder to the list of favorites
-[[ $(mysides list | grep $loggedInUser) ]] || mysides add $loggedInUser file:///Users/$loggedInUser
+sfltool add-item com.apple.LSSharedFileList.FavoriteItems "file:///Users/$loggedInUser"
 
 # Set Home as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
