@@ -29,6 +29,9 @@ steps:
         skip_in_ci: true
         description: Installing useful Automator Workflows as Services.
   - brew:
+      tap:
+        - dart-lang/dart
+  - brew:
       formula:
         - nvim
         - vim
