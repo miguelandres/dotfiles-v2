@@ -11,6 +11,17 @@ defaults:
 
 steps:
   - brew:
+      formula:
+        - docker
+        - docker-compose
+        - corretto@21
+        - jenv
       cask:
         - datagrip
         - postman
+  - exec:
+      - cmd: jenv add /Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home
+        description: Adding Corretto 21 to jenv
+      - cmd: jenv global corretto64-21.0.10
+        description: set jenv to 21
+        skip_in_ci: true
