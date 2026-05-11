@@ -16,7 +16,6 @@ steps:
         - affinity-photo
         - affinity-designer
         - affinity-publisher
-        - darktable
         # streaming and screen recording
         - obs
         - blackhole-2ch
