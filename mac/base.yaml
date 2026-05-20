@@ -104,6 +104,7 @@ steps:
         - typstyle
       cask:
         # Programming stuff
+        - antigravity
         - github
         - visual-studio-code
         - textmate
