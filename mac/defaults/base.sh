@@ -211,9 +211,10 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 # Delay of only one second for spring loading
 defaults write NSGlobalDomain com.apple.springing.delay -float 1
 
-# Avoid creating .DS_Store files on network or USB volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+# Allow creating .DS_Store files on network or USB volumes
+# We only use macs and this makes it easier to deal with previews anyway.
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool false
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool false
 
 # Disable disk image verification
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
