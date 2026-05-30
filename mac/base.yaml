@@ -28,12 +28,9 @@ steps:
       - cmd: ./install_workflows.sh
         skip_in_ci: true
         description: Installing useful Automator Workflows as Services.
-      - cmd: if ! command -v cargo >/dev/null 2>&1; then curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y; fi
+      - cmd: if ! command -v cargo >/dev/null 2>&1; then curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y; . "$HOME/.cargo/env" && rustup toolchain install nightly; fi
         skip_in_ci: true
         description: Installing Rust via rustup
-      - cmd: if ! command -v cargo >/dev/null 2>&1; then . "$HOME/.cargo/env" && rustup toolchain install nightly; fi
-        skip_in_ci: true
-        description: Install rust nightly
   - brew:
       tap:
         - dart-lang/dart
