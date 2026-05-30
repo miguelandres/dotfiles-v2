@@ -17,7 +17,7 @@ PATH=$BREW_PREFIX/opt/ruby/bin:$BREW_PREFIX/opt/openssl@3/bin:$BREW_PREFIX/opt/p
 
 PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-PATH=$(gem environment gemdir)/bin:$PATH
+PATH=$(gem environment gemdir 2>/dev/null)/bin:$PATH
 ANDROID_SDK_ROOT=$BREW_PREFIX/share/android-commandlinetools
 SCALA_HOME=$BREW_PREFIX/opt/scala/idea
 export PATH
