@@ -28,6 +28,12 @@ steps:
       - cmd: ./install_workflows.sh
         skip_in_ci: true
         description: Installing useful Automator Workflows as Services.
+      - cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        skip_in_ci: true
+        description: Installing Rust via rustup
+      - cmd: rustup toolchain install nightly
+        skip_in_ci: true
+        description: Install rust nightly
   - brew:
       tap:
         - dart-lang/dart
@@ -68,7 +74,6 @@ steps:
         - pipx
         - rbenv
         - ruby
-        - rustup
         - typescript
         - uv
         # Linters
@@ -105,6 +110,7 @@ steps:
       cask:
         # Programming stuff
         - antigravity
+        -antigravity-ide
         - antigravity-cli
         - github
         - visual-studio-code
@@ -157,4 +163,3 @@ steps:
         # Creative
         Darkroom: 953286746
         Kindle: 302584613
-
