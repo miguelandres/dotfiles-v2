@@ -117,6 +117,7 @@ steps:
         - jordanbaird-ice
         - google-chrome
         - google-drive
+        - google-gemini
         - firefox
         - font-meslo-lg-nerd-font
         - iterm2
@@ -129,7 +130,6 @@ steps:
         - steam
         - vlc
         # Helpful tools
-        - chatgpt
         - disk-inventory-x
         - omnidisksweeper # kinda like disk-inventory-x
         - raycast
