@@ -110,7 +110,7 @@ steps:
       cask:
         # Programming stuff
         - antigravity
-        -antigravity-ide
+        - antigravity-ide
         - antigravity-cli
         - github
         - visual-studio-code
