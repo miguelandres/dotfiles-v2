@@ -16,10 +16,6 @@ steps:
         - affinity-photo
         - affinity-designer
         - affinity-publisher
-        # streaming and screen recording
-        - obs
-        - blackhole-2ch
-        - handbrake
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # `mas` actions should never be run in CI since they depend on a
