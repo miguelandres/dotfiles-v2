@@ -140,6 +140,10 @@ steps:
         - font-roboto
         - font-source-sans-3
         - font-fontawesome
+  - exec:
+      - cmd: ./iterm_config.sh
+        skip_in_ci: true
+        description: Configuring iTerm2 preferences
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # Some of these formulae and casks either take too long to install or just
