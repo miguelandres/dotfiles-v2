@@ -71,21 +71,28 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Uncomment when https://github.com/kcrawford/dockutil/issues/146 is fixed
 
-# dockutil --remove all --no-restart
-# dockutil --add "/Applications/Google Chrome.app" --no-restart
-# dockutil --add "/Applications/Safari.app" --no-restart
-# dockutil --add "/System/Applications/Messages.app" --no-restart
-# dockutil --add "/Applications/Dashlane.app" --no-restart
-# dockutil --add "/System/Applications/Facetime.app" --no-restart
-# dockutil --add "/System/Applications/Calendar.app" --no-restart
-# dockutil --add "/System/Applications/Contacts.app" --no-restart
-# dockutil --add "/System/Applications/App Store.app" --no-restart
-# dockutil --add "/System/Applications/System Preferences.app" --no-restart
-# dockutil --add "/System/Applications/Utilities/Activity Monitor.app" --no-restart
-# dockutil --add "/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app" --no-restart
-# dockutil --add "/Applications/Adobe Photoshop 2022/Adobe Photoshop 2022.app" --no-restart
-# dockutil --add "/Applications/Adobe Illustrator 2022/Adobe Illustrator.app" --no-restart
-# dockutil --add "/Applications/OBS.app" --no-restart
+dockutil --remove all --no-restart
+dockutil --add "/Applications/Forklift.app" --no-restart
+dockutil --add "/Applications/Google Chrome.app" --no-restart
+dockutil --add "/Applications/Dashlane.app" --no-restart
+dockutil --add "/Applications/WhatsApp.app" --no-restart
+dockutil --add "/System/Applications/Messages.app" --no-restart
+dockutil --add "/System/Applications/Mail.app" --no-restart
+dockutil --add "/System/Applications/Facetime.app" --no-restart
+dockutil --add "/System/Applications/Calendar.app" --no-restart
+dockutil --add "/System/Applications/Contacts.app" --no-restart
+dockutil --add "/Applications/iTerm.app" --no-restart
+dockutil --add "/Applications/Antigravity IDE.app" --no-restart
+dockutil --add "/System/Applications/Music.app" --no-restart
+dockutil --add "/System/Applications/App Store.app" --no-restart
+dockutil --add "/System/Applications/System Settings.app" --no-restart
+dockutil --add "/System/Applications/Utilities/Activity Monitor.app" --no-restart
+dockutil --add "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app" --no-restart
+dockutil --add "/Applications/Adobe Lightroom CC/Adobe Lightroom.app" --no-restart
+dockutil --add "/System/Applications/Home.app" --no-restart
+dockutil --add "/Applications/Gemini.app" --no-restart
+
+killall Dock
 
 ###############################################################################
 # Kill affected applications                                                  #
