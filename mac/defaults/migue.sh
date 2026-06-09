@@ -99,27 +99,25 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 # Uncomment when https://github.com/kcrawford/dockutil/issues/146 is fixed
 
 dockutil --remove all --no-restart
-dockutil --add "/Applications/Safari.app" --no-restart
-dockutil --add "/Applications/Firefox.app" --no-restart
+dockutil --add "/Applications/Google Chrome.app" --no-restart
 dockutil --add "/System/Applications/Messages.app" --no-restart
 dockutil --add "/Applications/Dashlane.app" --no-restart
 dockutil --add "/System/Applications/Calendar.app" --no-restart
 dockutil --add "/Applications/iTerm.app" --no-restart
+dockutil --add "/Applications/Antigravity IDE.app" --no-restart
 dockutil --add "/Applications/Parcel.app" --no-restart
 dockutil --add "/System/Applications/Music.app" --no-restart
-dockutil --add "/Applications/Microsoft Outlook.app" --no-restart
 dockutil --add "/Applications/Discord.app" --no-restart
-dockutil --add "/Applications/LINE.app" --no-restart
-dockutil --add "/Applications/KakaoTalk.app" --no-restart
-dockutil --add "/Applications/WeChat.app" --no-restart
 dockutil --add "/Applications/Signal.app" --no-restart
 dockutil --add "/Applications/WhatsApp.app" --no-restart
 dockutil --add "/Applications/Obsidian.app" --no-restart
 dockutil --add "/Applications/NetNewsWire.app" --no-restart
 dockutil --add "/Applications/Copilot.app" --no-restart
 dockutil --add "/System/Applications/App Store.app" --no-restart
-dockutil --add "/Applications/Visual Studio Code.app" --no-restart
 dockutil --add "/System/Applications/Home.app" --no-restart
+dockutil --add "/Applications/Gemini.app" --no-restart
+
+killall Dock
 
 ###############################################################################
 # Spotlight                                                                   #
