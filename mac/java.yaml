@@ -8,6 +8,7 @@ defaults:
     relink: true
   brew:
     adopt_casks: true
+    auto_trust_taps: true
 
 steps:
   - brew:
