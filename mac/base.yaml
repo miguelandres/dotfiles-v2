@@ -135,7 +135,15 @@ steps:
         - omnidisksweeper # kinda like disk-inventory-x
         - raycast
         # Typesetting
+        - font-meslo-lg-nerd-font
         - font-roboto
+        - font-roboto-condensed
+        - font-roboto-flex
+        - font-roboto-mono
+        - font-roboto-serif
+        - font-roboto-slab
+        - font-roboto-mono-nerd-font
+        - font-roboto-mono-for-powerline
         - font-source-sans-3
         - font-fontawesome
   - exec:
