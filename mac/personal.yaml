@@ -14,9 +14,7 @@ steps:
       cask:
         - intellij-idea
         # photography and media
-        - affinity-photo
-        - affinity-designer
-        - affinity-publisher
+        - affinity
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # `mas` actions should never be run in CI since they depend on a
