@@ -33,10 +33,10 @@ jobs:
       HOMEBREW_NO_SANDBOX_LINUX: 1
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
       - name: Install dotfiles
         run: |
           brew tap miguelandres/homebrew-tap
