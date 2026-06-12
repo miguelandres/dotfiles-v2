@@ -30,16 +30,13 @@ jobs:
     env:
       RUST_BACKTRACE: full
       RUSTV: ${{ matrix.rust }}
+      HOMEBREW_NO_SANDBOX_LINUX: 1
 
     steps:
       - uses: actions/checkout@v4
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
-      - if: matrix.target.gh_env == 'ubuntu-latest'
-        name: install bubblewrap
-        run: |
-          brew install bubblewrap
       - name: Install dotfiles
         run: |
           brew tap miguelandres/homebrew-tap
