@@ -39,6 +39,7 @@ jobs:
       - name: Install dotfiles
         run: |
           brew tap miguelandres/homebrew-tap
+          brew trust miguelandres/tap
           brew install dotfiles-rs
       - if: matrix.target.gh_env == 'macos-latest'
         name: Preinstall python
