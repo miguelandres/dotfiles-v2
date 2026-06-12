@@ -24,7 +24,6 @@ steps:
       formula:
         # Programming languages & Tools
         # - bazel has been moved to bazelisk on mac and bazel on linux
-        - coursier
         - google-java-format
         - jenv
         - kotlin

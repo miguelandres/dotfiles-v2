@@ -12,7 +12,7 @@ steps:
         - ffmpeg
         - libdvdcss
       cask:
-        - intellij-idea-ce
+        - intellij-idea
         # photography and media
         - affinity-photo
         - affinity-designer

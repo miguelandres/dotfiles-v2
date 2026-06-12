@@ -46,7 +46,6 @@ steps:
         - lazygit
         - jj
         # Other stuff
-        - comby
         - openssl
         # Shell stuff
         - fd
@@ -85,7 +84,6 @@ steps:
         - sass/sass/sass
         # typst
         - typst
-        - typstfmt
         - typstyle
 
   - brew:
@@ -131,7 +129,7 @@ steps:
         - steam
         - vlc
         # Helpful tools
-        - disk-inventory-x
+        - grandperspective # kinda like disk-inventory-x
         - omnidisksweeper # kinda like disk-inventory-x
         - raycast
         # Typesetting
