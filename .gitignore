@@ -29,3 +29,8 @@ Cargo.lock
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
