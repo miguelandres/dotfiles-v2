@@ -34,35 +34,13 @@ fi
 
 # Apply font to iTerm2 (all profiles)
 if command -v python3 >/dev/null 2>&1; then
-  python3 -c "
-import plistlib, os
-path = os.path.expanduser('~/Library/Preferences/com.googlecode.iterm2.plist')
-if os.path.exists(path):
-    with open(path, 'rb') as f:
-        plist = plistlib.load(f)
-    modified = False
-    for profile in plist.get('New Bookmarks', []):
-        profile['Normal Font'] = '${FONT_NAME} 12'
-        modified = True
-    if modified:
-        with open(path, 'wb') as f:
-            plistlib.dump(plist, f)
-"
+  python3 "$(dirname "$0")/set_iterm_font.py" "$FONT_NAME"
 else
   plutil -replace "New Bookmarks.0.Normal Font" -string "${FONT_NAME} 12" ~/Library/Preferences/com.googlecode.iterm2.plist
 fi
 
 # Apply font to Terminal.app (all profiles)
-osascript -e "tell application \"Terminal\"
-    repeat with profileName in (get name of every settings set)
-        try
-            tell settings set profileName
-                set font name to \"${FONT_NAME}\"
-                set font size to 12
-            end tell
-        end try
-    end repeat
-end tell"
+osascript "$(dirname "$0")/set_terminal_font.applescript" "$FONT_NAME"
 
 # Refresh the macOS defaults caching system (cfprefsd) to apply the changes
 defaults read com.googlecode.iterm2 >/dev/null
