@@ -4,7 +4,5 @@ defaults:
     relink: true
 
 steps:
-  - link:
-      - ~/.shellcheckrc: shellcheckrc
   - exec:
       - curl -fsSL https://bun.sh/install | bash

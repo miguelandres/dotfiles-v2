@@ -5,14 +5,20 @@
 SCRIPT=$(readlink -f $0)
 
 read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
-if [[ $? -gt 128 ]] ; then
+if [[ $? -gt 128 ]]; then
   echo "Timed out. Skipping this script."
   exit
 else
   case $yn in
-      [Yy]* ) ;;
-      [Nn]* ) echo "Not running the script"; exit;;
-      * ) echo "Not running the script"; exit;;
+    [Yy]*) ;;
+    [Nn]*)
+      echo "Not running the script"
+      exit
+      ;;
+    *)
+      echo "Not running the script"
+      exit
+      ;;
   esac
 fi
 echo "Running ${SCRIPT}"
@@ -29,7 +35,7 @@ while true; do
   sudo -n true
   sleep 60
   kill -0 "$$" || exit
-done 2>/dev/null &
+done 2> /dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -110,7 +116,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "America/New_York" 2>/dev/null
+sudo systemsetup -settimezone "America/New_York" 2> /dev/null
 
 # Disable bluetooth wake from sleep, no hot laptop in bag.
 defaults -currentHost write com.apple.Bluetooth RemoteWakeEnabled 0
@@ -394,7 +400,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Disable automatic spell checking
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
-
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #

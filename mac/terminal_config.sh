@@ -19,21 +19,21 @@ plutil -replace "New Bookmarks.0.Keyboard Map.0xf703-0x280000-0x7c" -json '{"Act
 # Determine the best available font (Berkeley Mono Nerd Font with fallback to MesloLG Nerd Font)
 FONT_NAME="BerkeleyMonoNerdFontComplete-Regular"
 
-if ! (fc-list : family | grep -i "Berkeley" >/dev/null 2>&1 || \
-      find "$HOME/Library/Fonts" "/Library/Fonts" -name "*Berkeley*Nerd*" -o -name "*BerkeleyMono*" >/dev/null 2>&1); then
+if ! (fc-list : family | grep -i "Berkeley" > /dev/null 2>&1 ||
+  find "$HOME/Library/Fonts" "/Library/Fonts" -name "*Berkeley*Nerd*" -o -name "*BerkeleyMono*" > /dev/null 2>&1); then
   # Fallback to MesloLG Nerd Font
   FONT_NAME="MesloLGSNFM-Regular"
-  if ! (fc-list : family | grep -i "MesloLGS" >/dev/null 2>&1 || \
-        find "$HOME/Library/Fonts" "/Library/Fonts" -name "*MesloLGS*" >/dev/null 2>&1); then
-    if fc-list : family | grep -i "MesloLGL" >/dev/null 2>&1 || \
-       find "$HOME/Library/Fonts" "/Library/Fonts" -name "*MesloLGL*" >/dev/null 2>&1; then
+  if ! (fc-list : family | grep -i "MesloLGS" > /dev/null 2>&1 ||
+    find "$HOME/Library/Fonts" "/Library/Fonts" -name "*MesloLGS*" > /dev/null 2>&1); then
+    if fc-list : family | grep -i "MesloLGL" > /dev/null 2>&1 ||
+      find "$HOME/Library/Fonts" "/Library/Fonts" -name "*MesloLGL*" > /dev/null 2>&1; then
       FONT_NAME="MesloLGLNFM-Regular"
     fi
   fi
 fi
 
 # Apply font to iTerm2 (all profiles)
-if command -v python3 >/dev/null 2>&1; then
+if command -v python3 > /dev/null 2>&1; then
   python3 "$(dirname "$0")/set_iterm_font.py" "$FONT_NAME"
 else
   plutil -replace "New Bookmarks.0.Normal Font" -string "${FONT_NAME} 12" ~/Library/Preferences/com.googlecode.iterm2.plist
@@ -43,4 +43,4 @@ fi
 osascript "$(dirname "$0")/set_terminal_font.applescript" "$FONT_NAME"
 
 # Refresh the macOS defaults caching system (cfprefsd) to apply the changes
-defaults read com.googlecode.iterm2 >/dev/null
+defaults read com.googlecode.iterm2 > /dev/null
