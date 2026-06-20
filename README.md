@@ -9,10 +9,22 @@ backing for maintainability and testability.
 
 ## Getting started
 
+### Key generation for Miguel
+
 ```sh
 [ -f ~/.ssh/id_rsa ] || ssh-keygen -t rsa -b 4096 -C "miguelandres@users.noreply.github.com"
 eval "$(ssh-agent -s)"
+```
 
+### Key generation for Mati
+
+```sh
+[ -f ~/.ssh/id_rsa ] || ssh-keygen -t rsa -b 4096 -C "matcativa@users.noreply.github.com"
+eval "$(ssh-agent -s)"
+```
+### More Key management for github
+
+```sh
 if [[ `uname` = "Darwin" ]]; then;
   tee ~/.ssh/config << EOF
 Host *
@@ -32,7 +44,11 @@ ssh-add -K ~/.ssh/id_rsa 2>/dev/null || ssh-add ~/.ssh/id_rsa
 
 echo "Put the following key in your github account."
 cat ~/.ssh/id_rsa.pub
+```
 
+### Bootstrap `dotfiles-rs`
+
+```sh
 mkdir ~/src
 cd ~/src
 git clone --recurse-submodules -j8 git@github.com:miguelandres/dotfiles-v2.git
@@ -49,6 +65,7 @@ rm dotfiles
 
 # Use homebrew to properly install it and get updates when available
 brew tap miguelandres/homebrew-tap
+brew trust miguelandres/homebrew-tap
 brew install dotfiles-rs
 ```
 
