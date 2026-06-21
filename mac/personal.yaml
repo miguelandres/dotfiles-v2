@@ -13,6 +13,7 @@ steps:
         - libdvdcss
       cask:
         - intellij-idea
+        - obs
         # photography and media
         - affinity
   - brew:
@@ -21,6 +22,7 @@ steps:
       # Mac App Store login.
       skip_in_ci: true
       mas:
+        Flighty: 1358823008
         Darkroom: 953286746
         # Chat & Communication
         Wechat: 836500024
@@ -33,3 +35,7 @@ steps:
         # Who really needs this?
         # PowerPoint: 462062816
         Word: 462054704
+        # Apple Pro apps
+        Compressor: 424390742
+        Final Cut Pro: 424389933
+        Logic Pro: 634148309
