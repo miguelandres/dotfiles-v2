@@ -68,9 +68,6 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-
 # Disable automatic termination of inactive apps
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
@@ -181,9 +178,6 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 ###############################################################################
 
 loggedInUser=$(/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }')
-
-# Adds Home Folder to the list of favorites
-sfltool add-item com.apple.LSSharedFileList.FavoriteItems "file:///Users/$loggedInUser"
 
 # Set Home as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -448,11 +442,8 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
-# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+# TextEdit, and Disk Utility                                                  #
 ###############################################################################
-
-# Enable the debug menu in Address Book
-defaults write com.apple.addressbook ABShowDebugMenu -bool true
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0

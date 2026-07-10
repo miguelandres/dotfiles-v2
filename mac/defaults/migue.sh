@@ -69,9 +69,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Four-letter codes for view modes: Icon `icnv`, Column `clmv`, Gallery `glyv`, List "Nlsv"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
-
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
