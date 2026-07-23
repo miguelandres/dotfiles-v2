@@ -16,6 +16,8 @@ steps:
         - obs
         # photography and media
         - affinity
+        # Plex desktop
+        - plex
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
       # `mas` actions should never be run in CI since they depend on a
