@@ -5,18 +5,23 @@
 SCRIPT=$(readlink -f $0)
 
 read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
-if [[ $? -gt 128 ]] ; then
+if [[ $? -gt 128 ]]; then
   echo "Timed out. Skipping this script."
   exit
 else
   case $yn in
-      [Yy]* ) ;;
-      [Nn]* ) echo "Not running the script"; exit;;
-      * ) echo "Not running the script"; exit;;
+    [Yy]*) ;;
+    [Nn]*)
+      echo "Not running the script"
+      exit
+      ;;
+    *)
+      echo "Not running the script"
+      exit
+      ;;
   esac
 fi
 echo "Running ${SCRIPT}"
-
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -30,7 +35,7 @@ while true; do
   sudo -n true
   sleep 60
   kill -0 "$$" || exit
-done 2>/dev/null &
+done 2> /dev/null &
 
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
@@ -109,6 +114,6 @@ for app in "Activity Monitor" \
   "Messages" \
   "Safari" \
   "SystemUIServer"; do
-  killall "${app}" &>/dev/null
+  killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."

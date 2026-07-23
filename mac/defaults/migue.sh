@@ -5,14 +5,20 @@
 SCRIPT=$(readlink -f $0)
 
 read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
-if [[ $? -gt 128 ]] ; then
+if [[ $? -gt 128 ]]; then
   echo "Timed out. Skipping this script."
   exit
 else
   case $yn in
-      [Yy]* ) ;;
-      [Nn]* ) echo "Not running the script"; exit;;
-      * ) echo "Not running the script"; exit;;
+    [Yy]*) ;;
+    [Nn]*)
+      echo "Not running the script"
+      exit
+      ;;
+    *)
+      echo "Not running the script"
+      exit
+      ;;
   esac
 fi
 echo "Running ${SCRIPT}"
@@ -29,7 +35,7 @@ while true; do
   sudo -n true
   sleep 60
   kill -0 "$$" || exit
-done 2>/dev/null &
+done 2> /dev/null &
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -62,9 +68,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Use Column view in all Finder windows by default
 # Four-letter codes for view modes: Icon `icnv`, Column `clmv`, Gallery `glyv`, List "Nlsv"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-
-# Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -151,10 +154,10 @@ defaults write com.apple.spotlight orderedItems -array \
   '{"enabled" = 1;"name" = "SOURCE";}'
 
 # Load new settings before rebuilding the index
-killall mds >/dev/null 2>&1
+killall mds > /dev/null 2>&1
 # Make sure indexing is enabled for the main volume
-sudo mdutil -i on / >/dev/null
+sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
-sudo mdutil -E / >/dev/null
+sudo mdutil -E / > /dev/null
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."

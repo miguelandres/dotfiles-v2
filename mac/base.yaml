@@ -50,7 +50,6 @@ steps:
         # Shell stuff
         - fd
         - fzf
-        - shellcheck
         - shfmt
         - ripgrep
         - tmux

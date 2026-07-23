@@ -5,14 +5,20 @@
 SCRIPT=$(readlink -f $0)
 
 read -t 10 -p "Run ${SCRIPT} ? This may screw up your System Settings app until restart. Skipping in 10 secs [y/n] " yn
-if [[ $? -gt 128 ]] ; then
+if [[ $? -gt 128 ]]; then
   echo "Timed out. Skipping this script."
   exit
 else
   case $yn in
-      [Yy]* ) ;;
-      [Nn]* ) echo "Not running the script"; exit;;
-      * ) echo "Not running the script"; exit;;
+    [Yy]*) ;;
+    [Nn]*)
+      echo "Not running the script"
+      exit
+      ;;
+    *)
+      echo "Not running the script"
+      exit
+      ;;
   esac
 fi
 echo "Running ${SCRIPT}"
@@ -29,7 +35,7 @@ while true; do
   sudo -n true
   sleep 60
   kill -0 "$$" || exit
-done 2>/dev/null &
+done 2> /dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -61,9 +67,6 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-
-# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 # Disable automatic termination of inactive apps
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
@@ -110,7 +113,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "America/New_York" 2>/dev/null
+sudo systemsetup -settimezone "America/New_York" 2> /dev/null
 
 # Disable bluetooth wake from sleep, no hot laptop in bag.
 defaults -currentHost write com.apple.Bluetooth RemoteWakeEnabled 0
@@ -175,9 +178,6 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 ###############################################################################
 
 loggedInUser=$(/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }')
-
-# Adds Home Folder to the list of favorites
-sfltool add-item com.apple.LSSharedFileList.FavoriteItems "file:///Users/$loggedInUser"
 
 # Set Home as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -395,7 +395,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 # Disable automatic spell checking
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
-
 ###############################################################################
 # Terminal & iTerm 2                                                          #
 ###############################################################################
@@ -443,11 +442,8 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
-# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+# TextEdit, and Disk Utility                                                  #
 ###############################################################################
-
-# Enable the debug menu in Address Book
-defaults write com.apple.addressbook ABShowDebugMenu -bool true
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0

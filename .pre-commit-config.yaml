@@ -34,3 +34,10 @@ repos:
       - id: remove-tabs
         exclude: "^mac/Workflows/"
         args: ["--whitespaces-count", "2"]
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.13.1-1
+    hooks:
+      - id: shfmt
+        types: [text]
+        files: '(\.(sh|bash|zsh)$)|(^zsh/(zshrc|zshenv)$)|(^zsh/zshrc-imports/)'
+        exclude: '(\.yaml$|p10k\.zsh$)'
