@@ -1,4 +1,0 @@
-steps:
-  - subconfig:
-      - linux.yaml
-      - docker-services/raspberry-services.yaml

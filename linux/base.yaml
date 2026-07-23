@@ -30,6 +30,7 @@ steps:
         - ripgrep
         - tmux
         - vim
+        - shfmt
         - zsh
         - zsh-autosuggestions
         - zsh-syntax-highlighting

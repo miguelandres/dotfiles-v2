@@ -1,6 +1,0 @@
-steps:
-  - exec:
-      - cmd: docker compose -f portainer/docker-compose.yml up -d
-        description: Set up portainer container
-      - cmd: docker compose -f plex/docker-compose.yml up -d
-        description: Set up plex server

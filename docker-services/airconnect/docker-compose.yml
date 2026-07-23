@@ -1,6 +1,0 @@
-services:
-  airconnect:
-    image: 1activegeek/airconnect:latest
-    container_name: airconnect
-    network_mode: host
-    restart: always
